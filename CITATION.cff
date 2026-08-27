@@ -1,0 +1,35 @@
+# GitHub renders this as a "Cite this repository" button.
+# TODO before tagging v1.0.0: fill in the concept DOI (minted by
+# Zenodo on the first release) and the arXiv identifier, and confirm the
+# paper title matches the submitted manuscript exactly.
+cff-version: 1.2.0
+message: >-
+  If you use this framework, please cite it. Cite the version DOI to fix a
+  specific calculation, the concept DOI for the framework as a whole, and the
+  arXiv identifier for the text. A headline figure should always travel with
+  its plausibility band and its confidence label.
+title: "InferenceCarbon: A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure"
+type: software
+version: 1.0.0
+date-released: 2026-08-26   # TODO confirm on release day
+authors:
+  - family-names: Manktelow
+    given-names: James
+    orcid: "https://orcid.org/0009-0003-6822-8300"
+    affiliation: "InferenceCarbon Ltd"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.0000000   # TODO concept DOI after first release
+    description: "Concept DOI for all versions of the framework"
+license: Apache-2.0
+repository-code: "https://github.com/JNMCF/inferencecarbon-framework"   # TODO confirm final public repo URL
+preferred-citation:
+  type: article
+  title: "A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure"
+  authors:
+    - family-names: Manktelow
+      given-names: James
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2608.00000"   # TODO real arXiv identifier on 26 August

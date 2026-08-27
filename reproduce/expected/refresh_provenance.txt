@@ -1,0 +1,10 @@
+Refresh run: 2026-08-23 12:15 (local sandbox time)
+Input: InferenceCarbon_corpus_frozen_20260822.zip
+SHA-256 (verified before unpack): 01c57eb5bf41476fee8e06a8b677a72c172c849741cc65a9b554cf7397d84cc6
+Method: zip unpacked to clean scratch dir owned_benchmark/_refresh_20260823/; refresh_tables.py run
+  against the unpacked copy (NOT the live results/ tree); output copied to analysis/refresh_R.json.
+Exclusions: censored_or_failed=92, v1_reason=200, truncation_clamp=0
+Daggers (short-fallback rows): NONE — all reported R cells are 1k-basis.
+Monotonicity note: gpt-5 R_abs falls 6.12 (high) -> 3.75 (xhigh) — reported in paper text.
+Thin/excluded variants (F6, n<8): gpt-5-mini, gpt-5-nano, gpt-5.1 (all efforts); gpt-4o (retired, n=2).
+Basis correction 2026-08-23 (second pass): conversion factor 2.5 -> 3.3333 (per-1,000-OUTPUT-token basis, JM). All Wh/gCO2e outputs x4/3; verified vs corrected workbook 306/306.

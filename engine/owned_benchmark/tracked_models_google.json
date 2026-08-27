@@ -1,0 +1,55 @@
+{
+  "_comment": "Curated + locked, seeded from InferenceCarbon_TokenSec_Daily_Gemini.xlsx frontier set, mapped to live API ids. Single default variant per model (Gemini 2.5/3 think by default). 2026-07-23: gemini-2.5-flash is the Gemini-paper ANCHOR model \u2014 'repeats': 5 per fire (its CV was the worst in the set on n\u22482/day). To enable an effort ladder on a thinking model, first run `probe --provider google --variants '<model>:low,<model>:high'` to confirm reasoning_effort binds, then set reasoning:true + efforts + keep_default:true (keep_default preserves the existing default-mode daily column). Edit by hand. gemini-3-pro-preview REMOVED 2026-08-07: retired by Google (404 with Interactions-API migration notice); reference-only in the paper.",
+  "provider": "google",
+  "locked": true,
+  "efforts": [],
+  "models": [
+    {
+      "api_model": "gemini-3.1-pro-preview",
+      "reasoning": true,
+      "keep_default": true,
+      "efforts": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "api_model": "gemini-3-flash-preview",
+      "reasoning": true,
+      "keep_default": true,
+      "efforts": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "api_model": "gemini-3.1-flash-lite-preview",
+      "reasoning": false
+    },
+    {
+      "api_model": "gemini-3.5-flash",
+      "reasoning": false
+    },
+    {
+      "api_model": "gemini-2.5-flash",
+      "reasoning": false,
+      "repeats": 5
+    },
+    {
+      "api_model": "gemini-2.5-flash-lite",
+      "reasoning": false
+    },
+    {
+      "api_model": "gemma-4-31b-it",
+      "reasoning": false
+    },
+    {
+      "api_model": "gemini-3.6-flash",
+      "reasoning": false
+    },
+    {
+      "api_model": "gemini-3.5-flash-lite",
+      "reasoning": false
+    }
+  ]
+}

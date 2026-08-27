@@ -1,0 +1,6 @@
+provider,region,share,confidence,source,source_url,accessed
+openai,azure,26.7,Low,"Contract-value proxy: $250B/~7yr = $35.7B/yr (paper section 4.5; committed-capacity proxy, not a measurement of inference traffic)","Paper refs [33],[34],[35]",https://builtin.com/articles/openai-cloud-deals,2026-07
+openai,oracle_stargate,44.8,Low,"Contract-value proxy: $300B/5yr = $60B/yr (paper section 4.5)","Paper refs [33],[34],[35]",https://www.cnbc.com/2025/09/23/openai-first-data-center-in-500-billion-stargate-project-up-in-texas.html,2026-07
+openai,aws,4.0,Low,"Contract-value proxy: $38B/7yr = $5.4B/yr, signed Nov 2025 (paper section 4.5)","Paper refs [33],[34],[35]",https://siliconangle.com/2025/11/03/openai-inks-38b-ai-infrastructure-deal-aws/,2026-07
+openai,gcp,24.4,Low,"Contract-value proxy: details undisclosed; midpoint of comparable agreements $32.7B/yr assumed (paper section 4.5)","Paper refs [33],[34],[35]",https://builtin.com/articles/openai-cloud-deals,2026-07
+openai,coreweave,0.0,Low,"Excluded: CoreWeave capacity 'primarily' for training per its press release (paper section 4.5)","Paper ref [36]",,2026-07

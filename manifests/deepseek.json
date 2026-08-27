@@ -1,0 +1,54 @@
+{
+  "_comment": "Generated 2026-08-07; counts and dates refreshed 2026-08-26 from the frozen 22 Aug 2026 corpus (14,733 records) from the owned-benchmark corpus (7,378 run records; variant_dates compiled by Cowork from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
+  "provider": "deepseek",
+  "campaign_window": {
+    "start": "2026-06-25",
+    "compiled": "2026-08-22"
+  },
+  "models": [
+    {
+      "model_id": "deepseek-chat",
+      "family": "DeepSeek Chat",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-07-23",
+      "retired": null,
+      "first_measured": "2026-07-23",
+      "last_measured": "2026-08-22",
+      "n_requests": 105,
+      "n_failed": 8,
+      "notes": "Added 2026-07-23 as candidate R=1 non-reasoning baseline; later requests rejected with 400 'supported API model names are deepseek-v4-pro or deepseek-v4-flash'."
+    },
+    {
+      "model_id": "deepseek-v4-flash",
+      "family": "DeepSeek V4",
+      "effort_settings": [
+        "high",
+        "minimal"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 375,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "deepseek-v4-pro",
+      "family": "DeepSeek V4",
+      "effort_settings": [
+        "high",
+        "minimal"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 484,
+      "n_failed": 1,
+      "notes": ""
+    }
+  ]
+}

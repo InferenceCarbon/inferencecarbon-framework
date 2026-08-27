@@ -1,0 +1,2 @@
+filename,sha256,bytes,description
+InferenceCarbon_corpus_frozen_20260822.zip,01c57eb5bf41476fee8e06a8b677a72c172c849741cc65a9b554cf7397d84cc6,8891570,"Frozen per-request measurement corpus at the 22 Aug 2026 data close (results/ tree, 14733 request records, 24 Jun - 22 Aug 2026); source of every campaign-derived table in the paper"

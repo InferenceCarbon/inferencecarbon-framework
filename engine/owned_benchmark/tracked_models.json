@@ -1,0 +1,56 @@
+{
+  "_comment": "Curated list of OpenAI base models the owned benchmark tracks. Seeded from InferenceCarbon_TokenSec_Daily.xlsx. Reasoning models are expanded across every effort in 'efforts'. `discover` auto-appends NEW major families (family version greater than the current maximum, e.g. gpt-5.6, gpt-6) and their mini/nano/codex siblings; it never re-adds legacy or -pro / codex-max variants. Edit this file by hand to add or remove models.",
+  "efforts": [
+    "minimal",
+    "low",
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "exclude_substrings": [
+    "-pro",
+    "codex"
+  ],
+  "models": [
+    {
+      "api_model": "gpt-4o-mini",
+      "reasoning": false
+    },
+    {
+      "api_model": "gpt-5",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.2",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.4",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.4-mini",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.4-nano",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.5",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.6-luna",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.6-sol",
+      "reasoning": true
+    },
+    {
+      "api_model": "gpt-5.6-terra",
+      "reasoning": true
+    }
+  ]
+}

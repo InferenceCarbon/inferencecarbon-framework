@@ -1,0 +1,7 @@
+InferenceCarbon framework — collection and analysis software
+Copyright 2026 InferenceCarbon Ltd (https://inferencecarbon.ai)
+
+Licensed under the Apache License, Version 2.0. This snapshot is the frozen,
+per-release copy from which the release's published tables regenerate. The
+live operational stack (multi-vantage scheduling, model manifests and
+quality-assurance layers) is not published and is not licensed by this file.

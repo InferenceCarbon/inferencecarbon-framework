@@ -1,0 +1,40 @@
+{
+  "_comment": "Curated + locked, seeded from InferenceCarbon_TokenSec_Daily_Anthropic.xlsx frontier set. Single default variant per model. PROBED 2026-07-23, ladder LEFT OFF — verdicts: (a) thinking {type:enabled, budget_tokens} is ACCEPTED by the compat layer but budgets are CAPS the adaptive model never reaches (~500-650 hidden tokens at default, low=2048 and medium=8192 indistinguishable), so the ladder does not discriminate; (b) thinking {type:disabled} is REJECTED, so no R=1 non-thinking baseline exists via the compat layer — a baseline needs the native Anthropic API; (c) Claude thinks by default with NO thinking param sent, so all recorded Anthropic variants are default-adaptive-thinking. Consequence for the Claude brief: native-minus-o200k conflates Claude-vs-o200k tokenizer divergence with hidden thinking — calibrate the tokenizer share (e.g. count a known visible text both ways) before quoting hidden-token ratios. opus-4-6/sonnet-4-6 returned no usage payload during the campaign (usage_missing now flags this). Edit by hand.",
+  "provider": "anthropic",
+  "locked": true,
+  "efforts": [],
+  "models": [
+    {
+      "api_model": "claude-fable-5",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-sonnet-5",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-opus-5",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-opus-4-8",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-opus-4-7",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-opus-4-6",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-sonnet-4-6",
+      "reasoning": false
+    },
+    {
+      "api_model": "claude-haiku-4-5-20251001",
+      "reasoning": false
+    }
+  ]
+}

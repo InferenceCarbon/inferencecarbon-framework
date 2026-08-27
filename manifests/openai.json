@@ -1,0 +1,446 @@
+{
+  "_comment": "Generated 2026-08-07; counts and dates refreshed 2026-08-26 from the frozen 22 Aug 2026 corpus (14,733 records) from the owned-benchmark corpus (7,378 run records; variant_dates compiled by Cowork from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
+  "provider": "openai",
+  "campaign_window": {
+    "start": "2026-06-25",
+    "compiled": "2026-08-22"
+  },
+  "models": [
+    {
+      "model_id": "gpt-3.5-turbo",
+      "family": "GPT-3.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 9,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-3.5-turbo-0125",
+      "family": "GPT-3.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 9,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-3.5-turbo-1106",
+      "family": "GPT-3.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 9,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-4",
+      "family": "GPT-4",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 9,
+      "n_failed": 2,
+      "notes": "No successful owned measurements (2/2 requests failed; last failure: request failed: Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, yo)."
+    },
+    {
+      "model_id": "gpt-4-0613",
+      "family": "GPT-4",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 9,
+      "n_failed": 2,
+      "notes": "No successful owned measurements (2/2 requests failed; last failure: request failed: Error code: 400 - {'error': {'message': \"This model's maximum context length is 8192 tokens. However, yo)."
+    },
+    {
+      "model_id": "gpt-4-turbo",
+      "family": "GPT-4",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 9,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-4.1",
+      "family": "GPT-4.1",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 6,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-4.1-mini",
+      "family": "GPT-4.1",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 7,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-4.1-nano",
+      "family": "GPT-4.1",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 3,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-4o",
+      "family": "GPT-4o",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 3,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-4o-mini",
+      "family": "GPT-4o",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 222,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5",
+      "family": "GPT-5",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 1045,
+      "n_failed": 14,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5-codex",
+      "family": "GPT Codex (responses-endpoint line)",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 2,
+      "n_failed": 2,
+      "notes": "Not measurable via the chat-completions compat layer the benchmark uses ('only supported in v1/responses'); live model, wrong endpoint \u2014 no owned measurements. gpt-5.3-codex is excluded from Table 7 pending an owned measurement (paper limitation 25)."
+    },
+    {
+      "model_id": "gpt-5-mini",
+      "family": "GPT-5",
+      "effort_settings": [
+        "low",
+        "medium",
+        "minimal"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 7,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5-nano",
+      "family": "GPT-5",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 12,
+      "n_failed": 4,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.1",
+      "family": "GPT-5.1",
+      "effort_settings": [
+        "low",
+        "medium",
+        "minimal"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 6,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.1-codex",
+      "family": "GPT Codex (responses-endpoint line)",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 2,
+      "n_failed": 2,
+      "notes": "Not measurable via the chat-completions compat layer the benchmark uses ('only supported in v1/responses'); live model, wrong endpoint \u2014 no owned measurements. gpt-5.3-codex is excluded from Table 7 pending an owned measurement (paper limitation 25)."
+    },
+    {
+      "model_id": "gpt-5.1-codex-mini",
+      "family": "GPT Codex (responses-endpoint line)",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 2,
+      "n_failed": 2,
+      "notes": "Not measurable via the chat-completions compat layer the benchmark uses ('only supported in v1/responses'); live model, wrong endpoint \u2014 no owned measurements. gpt-5.3-codex is excluded from Table 7 pending an owned measurement (paper limitation 25)."
+    },
+    {
+      "model_id": "gpt-5.2",
+      "family": "GPT-5.2",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 996,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.2-codex",
+      "family": "GPT Codex (responses-endpoint line)",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 2,
+      "n_failed": 2,
+      "notes": "Not measurable via the chat-completions compat layer the benchmark uses ('only supported in v1/responses'); live model, wrong endpoint \u2014 no owned measurements. gpt-5.3-codex is excluded from Table 7 pending an owned measurement (paper limitation 25)."
+    },
+    {
+      "model_id": "gpt-5.3-codex",
+      "family": "GPT Codex (responses-endpoint line)",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-06-25",
+      "n_requests": 2,
+      "n_failed": 2,
+      "notes": "Not measurable via the chat-completions compat layer the benchmark uses ('only supported in v1/responses'); live model, wrong endpoint \u2014 no owned measurements. gpt-5.3-codex is excluded from Table 7 pending an owned measurement (paper limitation 25)."
+    },
+    {
+      "model_id": "gpt-5.4",
+      "family": "GPT-5.4",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 1010,
+      "n_failed": 41,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.4-mini",
+      "family": "GPT-5.4",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 1016,
+      "n_failed": 89,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.4-nano",
+      "family": "GPT-5.4",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 1014,
+      "n_failed": 1,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.5",
+      "family": "GPT-5.5",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-06-24",
+      "retired": null,
+      "first_measured": "2026-06-24",
+      "last_measured": "2026-08-22",
+      "n_requests": 1016,
+      "n_failed": 4,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.6-luna",
+      "family": "GPT-5.6",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-07-10",
+      "retired": null,
+      "first_measured": "2026-07-10",
+      "last_measured": "2026-08-22",
+      "n_requests": 868,
+      "n_failed": 14,
+      "notes": ""
+    },
+    {
+      "model_id": "gpt-5.6-sol",
+      "family": "GPT-5.6",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-07-10",
+      "retired": null,
+      "first_measured": "2026-07-10",
+      "last_measured": "2026-08-22",
+      "n_requests": 846,
+      "n_failed": 17,
+      "notes": "Intermittent 401 'insufficient permissions' failures on some efforts; measured successfully across the full ladder."
+    },
+    {
+      "model_id": "gpt-5.6-terra",
+      "family": "GPT-5.6",
+      "effort_settings": [
+        "high",
+        "low",
+        "medium",
+        "minimal",
+        "xhigh"
+      ],
+      "added": "2026-07-10",
+      "retired": null,
+      "first_measured": "2026-07-10",
+      "last_measured": "2026-08-22",
+      "n_requests": 869,
+      "n_failed": 11,
+      "notes": "Intermittent 401 'insufficient permissions' failures on some efforts; measured successfully across the full ladder."
+    }
+  ]
+}
