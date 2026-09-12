@@ -1,0 +1,29 @@
+"GridIntensity — Tables 3, 4, 5 and 11 (Sections 4.5 – 4.8, 5.4). BLUE = input. v1.0.0 (11 Sep 2026): Google credited at its GHG Protocol 2015 market-based Scope 2 realised intensity (Google 2026 Environmental Report, CY2025) instead of its 66% hourly CFE share.",,,,,,
+"Google inputs (2026 Environmental Report, Environmental metrics data tables, pp. 89, 92)",,,,,,
+"Scope 2 market-based, CY2025 (tCO2e)",2815000.0,,"Google 2026 Environmental Report, p. 89 — third-party limited assurance",,,
+"Scope 2 location-based, CY2025 (tCO2e)",15148700.0,,"Google 2026 Environmental Report, p. 89",,,
+"Total electricity consumption, CY2025 (MWh)",43586600.0,,"Google 2026 Environmental Report, p. 92 (data centres 42,415,800 MWh = 97.3%)",,,
+"Scope 2 market-based, CY2024 (tCO2e)",2898600.0,,"Google 2026 Environmental Report, p. 89",,,
+"Total electricity consumption, CY2024 (MWh)",31713900.0,,"Google 2026 Environmental Report, p. 92",,,
+"Hourly CFE, data centres, CY2025 (%)",65.0,,"Google 2026 Environmental Report, p. 93 — reported alongside, not instead of, market-based Scope 2; no longer used in Table 4",,,
+"Google realised market-based intensity, CY2025 (gCO2e/kWh)",64.584069,,#ERROR!,,,
+"Google realised location-based intensity, CY2025 (gCO2e/kWh)",347.554065,,Cross-check on Appendix D.3 assessed GCP intensity of 335 (row 17),,,
+"Google realised market-based intensity, CY2024 (gCO2e/kWh)",91.398409,,Prior-year comparator only,,,
+Tables 3 – 5: provider routing shares and intensities,,,,,,
+Provider,Routing share (Section 4.5),Location-based gCO2e/kWh (Section 4.6),LB contribution (Table 3),Market-based gCO2e/kWh (Table 4),MB contribution (Table 5),Market-based basis
+Microsoft Azure,0.234,447.0,104.598,73.0,17.082,"FY2025 reported market-based Scope 2: 2,707,428 mtCO2e / 37.0 TWh [37]"
+Oracle / Stargate,0.393,319.0,125.367,46.0,18.078,"FY25 reported market-based Scope 2: 237,251 tCO2e / 5.16 TWh [16]; out-of-period"
+Amazon Web Services,0.117,319.0,37.323,0.0,0,"100% annual match claimed, credited at face value; no AWS-level intensity computable (limitation 27)"
+Google Cloud Platform,0.255,335.0,85.425,64.584069,16.468938,"CY2025 reported market-based Scope 2: 2,815,000 tCO2e / 43,586,600 MWh (row 10)"
+Weighted total,0.999,,352.713,,51.628938,D20 = Table 3 location-based total; F20 = Table 5 market-based total
+Market-based reduction vs location-based (%),0.853623,,,,,
+Google share of market-based total (%),0.318987,,,,,
+Oracle/Stargate share of market-based total (%),0.350152,,,,,
+Google market-based conversion multiplier (Table 4),0.192788,,,,,
+Table 11: routing-share sensitivity (Section 5.4),,,,,,
+Routing scenario,Azure,Oracle / Stargate,AWS,GCP,Location-based gCO2e/kWh,Market-based gCO2e/kWh
+Azure-dominant illustration (70 / 10 / 5 / 15),0.7,0.1,0.05,0.15,411,65.38761
+Contract-weighted central (23.4 / 39.3 / 11.7 / 25.5),0.234,0.393,0.117,0.255,352.713,51.628938
+Procurement-lag scenario: Stargate uncredited (23.4 / 39.3 / 11.7 / 25.5),0.234,0.393,0.117,0.255,352.713,158.917938
+Stargate-ramped illustration (15 / 70 / 5 / 10),0.15,0.7,0.05,0.1,339.8,49.608407
+Procurement-lag row credits Oracle/Stargate at its location-based intensity (319) rather than its reported FY25 market-based Scope 2 (46).,,,,,,

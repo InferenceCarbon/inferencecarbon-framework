@@ -1,18 +1,28 @@
 # Reproducing the paper's tables
 
-`tables_7_to_10.py` regenerates Tables 7–10 from the committed parameter
-tables (`../parameters/`) and workbooks (`../data/workbooks/`). It runs from
-a clean clone, needs no API key and no corpus download, and its output is
-committed under `expected/` so a replicator can diff what they get against
-what we got:
+Two scripts, one chain. Neither needs an API key.
+
+| Script | From | To | Runtime |
+|---|---|---|---|
+| `corpus_summary.py` | frozen corpus zip (checksum verified on load) | the workbook's Corpus, Table B1, Bootstrap and RatioEnvelopes sheets, as CSV | ~10 s |
+| `tables_7_to_10.py` | the deposited workbook | every paper table as CSV; optional cell-by-cell check of a paper .docx | ~5 s |
 
 ```bash
-python tables_7_to_10.py --out out/
-diff -r out/ expected/
+pip install -r requirements.txt
+python corpus_summary.py --corpus ../data/InferenceCarbon_corpus_frozen_20260822.zip --out out/cs \
+       --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx      # prints the agreement report
+diff -r out/cs expected/corpus_summary                                        # should be silent
+python tables_7_to_10.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
+diff -r out/tables expected/tables                                             # should be silent
+python tables_7_to_10.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --paper <paper.docx>
 ```
 
-<!-- TODO(source needed): tables_7_to_10.py must be written against the real
-workbooks and parameter values — it is the paper's calculation chain, not
-scaffolding, and cannot be stubbed here without inventing the method. Commit
-its verbatim output to expected/ in the same change, and record the measured
-runtime in this README. -->
+The step between the two scripts — pasting `corpus_summary.py`'s output into the workbook's Corpus and
+Bootstrap sheets — is manual in v1.0.0; the `--workbook` comparison is the check that it was done correctly.
+Making it mechanical is on the verification to-do list (VERIFICATION.md §5).
+
+Filters, seeds and exclusions are stated in each script's docstring and in the paper (Appendix B.4, D.6).
+`expected/corpus_summary/provenance.json` records the exclusion counts of the deposited run.
+
+`legacy/` holds the 23 August 2026 refresh scripts that produced the review draft's tables; they are
+superseded and kept for the audit trail only.

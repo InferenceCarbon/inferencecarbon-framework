@@ -1,11 +1,5 @@
 # InferenceCarbon framework
 
-<!-- NOTE: the walkthrough says to write the README last, when the tree is
-settled. This is the agreed structure with the nine headings for its three
-audiences (red-team reviewer with 4–6 hours, journal reviewer, arXiv
-stranger); prose marked TODO is finalized once the population steps that
-feed it are done. -->
-
 ## What this is
 
 The repository accompanying *A Bounded Estimation Framework for the
@@ -31,8 +25,10 @@ calibration/    Tokenizer calibration (o200k_base vs native); the canonical basi
 parameters/     Everything Appendix A tabulates, with per-row source and access date
 data/           Corpus checksum manifest, Zenodo fetch script, derived workbooks
 data/external/  What is deliberately absent, and why
-reproduce/      Regenerates the paper's Tables 7–10; expected outputs committed for diffing
+reproduce/      corpus_summary.py (corpus → workbook inputs) and tables_7_to_10.py (workbook → tables, paper check); expected outputs committed
 briefs/         Per-brief data folders and reproduce scripts
+BASIS_OF_PREPARATION.md   Boundary, method, conventions, data-quality indicators — for inventory preparers and assurance providers
+VERIFICATION.md           Chain of evidence, verification steps and record, known discrepancies, reproduction-statement template
 ```
 
 ## Reproducing the paper's tables
@@ -42,11 +38,15 @@ download and no API key required**:
 
 ```bash
 git clone https://github.com/InferenceCarbon/inferencecarbon-framework.git && cd inferencecarbon-framework
-python reproduce/tables_7_to_10.py --out out/
-diff -r out/ reproduce/expected/
+pip install -r reproduce/requirements.txt
+python reproduce/tables_7_to_10.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
+diff -r out/tables reproduce/expected/tables
 ```
 
-Expected runtime: TODO (measure on a clean clone before release).
+Runtime: about five seconds. To go one step further back — from the frozen corpus to the workbook's
+measured inputs — run `reproduce/corpus_summary.py` (about ten seconds; see `reproduce/README.md`).
+The full verification procedure, and what has and has not been independently verified, is in
+[VERIFICATION.md](VERIFICATION.md).
 
 ## Running the collection engine
 

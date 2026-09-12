@@ -8,8 +8,8 @@ paper's reference list.
 
 | File | Contents |
 |---|---|
-| `provider_reference.csv` | Per-provider PUE and clean-energy match (Appendix A.1–A.4), the anchor's implicit PUE, the footprint-weighted OpenAI location/market-based intensities (§4.6–4.8), and the Stargate intensity scenarios |
-| `routing_shares.csv` | OpenAI multi-cloud routing shares from the §4.5 contract-value proxy (Azure 26.7 / Oracle-Stargate 44.8 / AWS 4.0 / GCP 24.4), all at Low confidence — the paper's most consequential very-low-confidence input |
+| `provider_reference.csv` | Per-provider PUE, clean-energy claims and — where reported — realised market-based Scope 2 intensities (Appendix A.1–A.4; Microsoft, Oracle and Google are credited at the realised figure, AWS at face value), the anchor's implicit PUE, the footprint-weighted OpenAI location/market-based intensities (§4.6–4.8), the Stargate intensity scenarios, and the pre-fill ratio of Appendix D.5.8 |
+| `routing_shares.csv` | OpenAI multi-cloud routing shares from the §4.5 contract-value proxy (Azure 23.4 / Oracle-Stargate 39.3 / AWS 11.7 / GCP 25.5), all at Low confidence — the paper's most consequential low-confidence input |
 
 Values transcribed from the paper and verified against their cited sources.
 

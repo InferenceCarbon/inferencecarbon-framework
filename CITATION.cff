@@ -11,7 +11,7 @@ message: >-
 title: "InferenceCarbon: A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure"
 type: software
 version: 1.0.0
-date-released: 2026-08-26   # TODO confirm on release day
+date-released: 2026-09-21   # TODO confirm on release day
 authors:
   - family-names: Manktelow
     given-names: James
@@ -22,7 +22,7 @@ identifiers:
     value: 10.5281/zenodo.0000000   # TODO concept DOI after first release
     description: "Concept DOI for all versions of the framework"
 license: Apache-2.0
-repository-code: "https://github.com/JNMCF/inferencecarbon-framework"   # TODO confirm final public repo URL
+repository-code: "https://github.com/InferenceCarbon/inferencecarbon-framework"
 preferred-citation:
   type: article
   title: "A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure"
@@ -32,4 +32,4 @@ preferred-citation:
   year: 2026
   identifiers:
     - type: other
-      value: "arXiv:2608.00000"   # TODO real arXiv identifier on 26 August
+      value: "arXiv:2608.00000"   # TODO real arXiv identifier on release day

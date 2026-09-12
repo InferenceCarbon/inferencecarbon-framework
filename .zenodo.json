@@ -1,6 +1,6 @@
 {
   "title": "InferenceCarbon: A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure",
-  "description": "<p>Repository accompanying the InferenceCarbon framework paper: the collection engine, tracked-model manifests, tokenizer calibration runs, parameter tables (with per-row sources), and the scripts that reproduce the paper's tables from committed parameters and workbooks. The raw per-request corpus is archived as a separate frozen Zenodo deposit; data/manifest.csv in this repository carries the SHA-256 checksum of every corpus file and data/fetch_corpus.py retrieves and verifies it. Figures produced by this framework are bounded estimates published with Low/Central/High plausibility bands and qualitative confidence labels; the envelopes are part of the finding.</p><p>TODO before tagging: confirm this description against the final abstract.</p>",
+  "description": "<p>Repository accompanying the InferenceCarbon framework paper: the collection engine, tracked-model manifests, tokenizer calibration runs, parameter tables (with per-row sources), and the scripts that reproduce the paper's tables from the frozen corpus and the deposited workbook (corpus_summary.py, tables_7_to_10.py), a basis-of-preparation statement with data-quality indicators, and a verification record. The raw per-request corpus is archived as a separate frozen Zenodo deposit; data/manifest.csv in this repository carries the SHA-256 checksum of every corpus file and data/fetch_corpus.py retrieves and verifies it. Figures produced by this framework are bounded estimates published with Low/Central/High plausibility bands and qualitative confidence labels; the envelopes are part of the finding.</p><p>TODO before tagging: confirm this description against the final abstract.</p>",
   "creators": [
     {
       "name": "Manktelow, James",
@@ -23,7 +23,7 @@
     {
       "identifier": "arXiv:2608.00000",
       "relation": "isSupplementTo",
-      "comment": "TODO replace with the real arXiv identifier on 26 August"
+      "comment": "TODO replace with the real arXiv identifier on release day"
     }
   ]
 }

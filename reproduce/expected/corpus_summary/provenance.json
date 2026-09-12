@@ -1,0 +1,51 @@
+{
+ "exclusions": {
+  "v1_reason": 200,
+  "min_answer_not_met": 66,
+  "censored_or_failed": 27
+ },
+ "thin_variants": [
+  [
+   "gpt-5-mini (minimal)",
+   2
+  ],
+  [
+   "gpt-5-mini (low)",
+   2
+  ],
+  [
+   "gpt-5-mini (medium)",
+   3
+  ],
+  [
+   "gpt-5-nano (minimal)",
+   2
+  ],
+  [
+   "gpt-5-nano (low)",
+   2
+  ],
+  [
+   "gpt-5-nano (medium)",
+   3
+  ],
+  [
+   "gpt-5.1 (minimal)",
+   2
+  ],
+  [
+   "gpt-5.1 (low)",
+   2
+  ],
+  [
+   "gpt-5.1 (medium)",
+   2
+  ]
+ ],
+ "corpus_sha256": "01c57eb5bf41476fee8e06a8b677a72c172c849741cc65a9b554cf7397d84cc6",
+ "B": 10000,
+ "seeds": [
+  20260822,
+  20260823
+ ]
+}

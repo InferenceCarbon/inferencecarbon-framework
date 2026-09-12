@@ -39,3 +39,6 @@ venv/
 # Corpus files live in the Zenodo deposit, not in git
 data/corpus/
 *.jsonl.gz
+
+# Reproduction outputs (regenerated; compare against reproduce/expected/)
+reproduce/out/

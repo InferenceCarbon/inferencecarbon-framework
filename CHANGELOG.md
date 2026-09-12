@@ -6,25 +6,45 @@ archived on Zenodo with its own version DOI.
 
 ## [Unreleased]
 
-## [1.0.0] — 2026-08-26 (planned)
+Planned for v1.0.1 (parameter/record fixes, comparability preserved): the workbook Corpus-sheet
+defects listed in [VERIFICATION.md](VERIFICATION.md) §4; Table 3 AWS contribution 37.5 → 37.3.
 
-First public release, accompanying the framework paper submitted to arXiv on
-26 August 2026. Version numbering starts at 1.0.0 with this release; the
-paper's own draft numbering is internal and does not appear here.
+## [1.0.0] — 2026-09 (release candidate; date and DOI filled on release)
 
-- Collection engine (paper Appendix B): campaign scripts, pollers, and
-  environment-variable-only configuration.
-- Tracked-model manifests, one per provider, with entry/retirement dates.
-- Tokenizer calibration runs (o200k_base vs native), with the calibrated-
-  tokenizer basis stated once in `calibration/README.md`.
-- Parameter tables (paper Appendix A) with per-row source and access date.
-- Frozen corpus committed to `data/` and mirrored in the Zenodo data deposit
-  (22 Aug 2026 data close; 14,733 request records, 24 Jun – 22 Aug 2026;
-  SHA-256 in `data/manifest.csv`), with checksum manifest and fetch script.
-- Data-close refresh outputs (`reproduce/expected/`): final per-variant
-  tables, measured reasoning multipliers, and supplementary statistics,
-  regenerated once from the frozen corpus on 23 Aug 2026.
-- Summary workbooks reproducing paper Tables 7–9 (`data/workbooks/`).
-- Manifests and variant dates refreshed to the actual 22 Aug close
-  (54 models, 106 variants).
-- Version DOI: 10.5281/zenodo.TODO (filled in after the release is minted).
+First public release, accompanying the framework paper. Version numbering starts at 1.0.0
+with this release; the paper's internal draft numbering does not appear here.
+
+Paper identifiers: arXiv:TODO · version DOI 10.5281/zenodo.TODO · concept DOI 10.5281/zenodo.TODO.
+
+### Methodology and figures (relative to the 26 August review draft)
+- Google Cloud credited at its reported CY2025 GHG Protocol market-based Scope 2 realised intensity
+  (64.6 gCO₂e/kWh, Google 2026 Environmental Report) instead of its 66% hourly carbon-free-energy share,
+  so the Section 3.7 realised-intensity rule applies to Microsoft, Oracle and Google alike and every
+  market-based figure rests on a 2015-Guidance quantity. Market-based headline 64 → 52 gCO₂e/kWh;
+  procurement-lag scenario 172 → 159. Location-based figures unchanged.
+- Shape correction for queries far from the anchor's 1:3 input:output shape (paper Appendix D.5.8;
+  pre-fill ratio 0.012 from the anchor's own two-point fit, 0.058 as sensitivity); Table 10 gains a
+  50,000-token-input row; limitation 29 restated. The two-term prefill/decode model is deferred to v2.0.
+- Reasoning-cell filter: answers that stop short of the prompt's word minimum are excluded from the
+  fixed-task reasoning cells (10 September 2026); the k = 36 heavy rung is exempt (see VERIFICATION.md §4).
+- Routing shares restated from the contract-value proxy with the AWS $100B investment included:
+  Azure 23.4 / Oracle-Stargate 39.3 / AWS 11.7 / GCP 25.5.
+
+### Deposit
+- `data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx` — the paper-authoritative calculation chain,
+  now carrying the GridIntensity (Tables 3, 4, 5, 11) and ShapeCorrection (Appendix D.5.8) sheets.
+  Replaces `OpenAIModelCalculations_Aug2026.xlsx`.
+- `reproduce/corpus_summary.py` — regenerates the workbook's corpus-derived sheets (Corpus, Table B1,
+  Bootstrap, RatioEnvelopes) from the frozen corpus with the filters stated in the paper; seeds 20260822
+  and 20260823. Replaces the legacy `refresh_tables.py` / `build_final_tables.py` pair, moved to
+  `reproduce/legacy/`.
+- `reproduce/tables_7_to_10.py` — exports every paper table from the workbook and checks a paper .docx
+  against it cell by cell. Expected outputs committed under `reproduce/expected/`.
+- `BASIS_OF_PREPARATION.md` — boundary, method, conventions and data-quality indicators in the form
+  an inventory preparer or assurance provider expects.
+- `VERIFICATION.md` — chain of evidence, verification steps, the verification record (author-side
+  reproduction only, as of this release), known workbook discrepancies, and a reproduction-statement template.
+- `parameters/` — routing shares and provider reference restated to the v1.0.0 values (Google CY2025
+  realised intensity; Microsoft and Oracle realised intensities; pre-fill ratio).
+- Collection engine (paper Appendix B), tracked-model manifests, tokenizer calibration, corpus checksum
+  manifest and fetch script, as in the 26 August draft deposit.
