@@ -227,7 +227,7 @@ def write_workbook(src, dst, rows, boot, rat, R, floor):
         for j, v in enumerate(vals):
             if v is not None: ws.cell(r, 2 + j).value = v; n += 1
     a_ = wb['Assumptions']
-    a_['A26'] = 'v1.0.1: Corpus, TableB1, Bootstrap, RatioEnvelopes and T1_GPT55_Grid input cells written by corpus_summary.py --write-workbook (seeds 20260822/20260823); no formula changed.'
+    a_['A26'] = 'v1.0.0: Corpus, TableB1, Bootstrap, RatioEnvelopes and T1_GPT55_Grid input cells written by corpus_summary.py --write-workbook (seeds 20260822/20260823); no formula changed.'
     wb.save(dst)
     print('wrote', n, 'input cells to', dst, '- recalculate before use')
 

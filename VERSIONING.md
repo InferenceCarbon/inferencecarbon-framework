@@ -53,7 +53,7 @@ welcome: methodology@inferencecarbon.ai.
 
 Within a release the workbook `data/workbooks/OpenAIModelCalculations_<version>.xlsx` is the
 authoritative calculation chain: paper tables are regenerated from it, never edited by hand, and
-`reproduce/tables_7_to_10.py --paper` is the check. The frozen corpus is authoritative for the
+`reproduce/paper_tables.py --paper` is the check. The frozen corpus is authoritative for the
 measured inputs; `reproduce/corpus_summary.py` is the check on the workbook's Corpus, Bootstrap and
 RatioEnvelopes sheets. Where the paper, the workbook and the corpus disagree, the corpus wins, then
 the workbook, and the discrepancy is logged in VERIFICATION.md §4 until the next release fixes it.

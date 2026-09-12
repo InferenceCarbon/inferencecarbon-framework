@@ -1,6 +1,6 @@
 provider,region,share,confidence,source,source_url_note,source_url,accessed
-openai,azure,23.4,Low,"Contract-value proxy: $250B/7 = $35.7B/year (paper section 4.5; committed-capacity proxy, not a measurement of inference traffic)",Paper refs [40]-[46],https://builtin.com/articles/openai-cloud-deals,2026-08
-openai,oracle_stargate,39.3,Low,Contract-value proxy: $300B/5 = $60.0B/year (paper section 4.5),Paper refs [40]-[46],https://www.cnbc.com/2025/09/23/openai-first-data-center-in-500-billion-stargate-project-up-in-texas.html,2026-08
-openai,aws,11.7,Low,"Contract-value proxy: $38B/7 + $100B/8 = $17.9B/year, Nov 2025 agreement plus the $50B Amazon investment (paper section 4.5)","Paper refs [43],[46]",https://siliconangle.com/2025/11/03/openai-inks-38b-ai-infrastructure-deal-aws/,2026-08
-openai,gcp,25.5,Low,Contract-value proxy: contract undisclosed; midpoint of the disclosed range $17.9B - $60B/year = $39.0B/year assumed (paper section 4.5); wholly inferred,Paper section 4.5,https://builtin.com/articles/openai-cloud-deals,2026-08
-openai,coreweave,0.0,Low,"Excluded: CoreWeave capacity described as for training in its press release (paper section 4.5, Appendix E.6)",Paper ref [47],,2026-08
+openai,azure,23.4,Low,"Contract-value proxy: $250B/7 = $35.7B/year (paper section 4.5; committed-capacity proxy, not a measurement of inference traffic)","Paper refs [39],[42]",https://builtin.com/articles/openai-cloud-deals,2026-08
+openai,oracle_stargate,39.3,Low,Contract-value proxy: $300B/5 = $60.0B/year (paper section 4.5),"Paper refs [39],[42]",https://www.cnbc.com/2025/09/23/openai-first-data-center-in-500-billion-stargate-project-up-in-texas.html,2026-08
+openai,aws,11.7,Low,"Contract-value proxy: $38B/7 + $100B/8 = $17.9B/year, Nov 2025 agreement plus the $50B Amazon investment (paper section 4.5)","Paper refs [42],[39]",https://siliconangle.com/2025/11/03/openai-inks-38b-ai-infrastructure-deal-aws/,2026-08
+openai,gcp,25.5,Low,Contract-value proxy: contract undisclosed; midpoint of the disclosed range $17.9B - $60B/year = $39.0B/year assumed (paper section 4.5); wholly inferred,"Paper refs [39],[40],[41],[42]",https://builtin.com/articles/openai-cloud-deals,2026-08
+openai,coreweave,0.0,Low,"Excluded: CoreWeave capacity described as for training in its press release (paper section 4.5, Appendix E.6)",Paper refs [92],,2026-08

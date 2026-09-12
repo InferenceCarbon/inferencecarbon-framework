@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """formula_audit.py — VERIFICATION.md step V6: no typed constants outside the declared input cells.
 
-Rule: on the calculation sheets (Table7, Table8, C_Low, C_High, Table9, GridIntensity, ShapeCorrection,
+Rule: on the calculation sheets (Table6, Table7, C_Low, C_High, Table8, GridIntensity, ShapeCorrection,
 Assumptions, Bootstrap, RatioEnvelopes, Levers, Pinching) every numeric cell must be either a formula or a
 declared input. Declared inputs are (a) cells in BLUE font (FF0000FF) — the workbook's own convention — or
 (b) cells on the corpus-derived sheets (Corpus, TableB1, T1_GPT55_Grid) and the Bootstrap / RatioEnvelopes
@@ -12,7 +12,7 @@ Exit status 1 if any undeclared constant is found.
 """
 import argparse, sys, openpyxl
 BLUE = 'FF0000FF'
-CALC = ['Assumptions', 'GridIntensity', 'Table7', 'Table8', 'C_Low', 'C_High', 'Table9', 'ShapeCorrection', 'Levers', 'Pinching', 'Bootstrap', 'RatioEnvelopes']
+CALC = ['Assumptions', 'GridIntensity', 'Table6', 'Table7', 'C_Low', 'C_High', 'Table8', 'ShapeCorrection', 'Levers', 'Pinching', 'Bootstrap', 'RatioEnvelopes']
 REGEN = {'Bootstrap': {3, 4, 5, 8, 9, 10, 11, 12}, 'RatioEnvelopes': {10, 12, 13}}   # columns corpus_summary.py writes
 ap = argparse.ArgumentParser(); ap.add_argument('--workbook', required=True); a = ap.parse_args()
 wb = openpyxl.load_workbook(a.workbook)

@@ -25,7 +25,7 @@ calibration/    Tokenizer calibration (o200k_base vs native); the canonical basi
 parameters/     Everything Appendix A tabulates, with per-row source and access date
 data/           Corpus checksum manifest, Zenodo fetch script, derived workbooks
 data/external/  What is deliberately absent, and why
-reproduce/      corpus_summary.py (corpus → workbook inputs) and tables_7_to_10.py (workbook → tables, paper check); expected outputs committed
+reproduce/      corpus_summary.py (corpus → workbook inputs) and paper_tables.py (workbook → tables, paper check); expected outputs committed
 briefs/         Per-brief data folders and reproduce scripts
 BASIS_OF_PREPARATION.md   Boundary, method, conventions, data-quality indicators — for inventory preparers and assurance providers
 VERIFICATION.md           Chain of evidence, verification steps and record, known discrepancies, reproduction-statement template
@@ -39,7 +39,7 @@ download and no API key required**:
 ```bash
 git clone https://github.com/InferenceCarbon/inferencecarbon-framework.git && cd inferencecarbon-framework
 pip install -r reproduce/requirements.txt
-python reproduce/tables_7_to_10.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
+python reproduce/paper_tables.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
 diff -r out/tables reproduce/expected/tables
 ```
 

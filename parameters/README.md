@@ -3,7 +3,7 @@
 Machine-readable copies of everything Appendix A tabulates. **Every value
 carries its source and access date in the row** — Appendix A has this in
 prose; the CSV column is what makes a reviewer's spot-check take a minute
-rather than an afternoon. Bracketed reference numbers (e.g. `[37]`) are the
+rather than an afternoon. Bracketed reference numbers (e.g. `[32]`) are the
 paper's reference list.
 
 | File | Contents |
@@ -16,7 +16,7 @@ Values transcribed from the paper and verified against their cited sources.
 ## Grid intensities are not redistributed here
 
 The subregion CO₂e emission rates the paper uses come from the Cornerstone
-Sustainability Data Initiative's eGRID2024 computation (paper ref [26],
+Sustainability Data Initiative's eGRID2024 computation (paper ref [27],
 https://zenodo.org/records/18968658). That dataset carries its own licence
 and is not reproduced in this repository. The individual rates the paper
 relies on are quoted, with their subregion codes, in Appendix A and section

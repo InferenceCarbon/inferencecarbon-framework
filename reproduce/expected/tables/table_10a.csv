@@ -47,7 +47,7 @@ gpt-5.6-terra (low),10.641683,3.81327,3.810873,9.815145,8.674961,10.36466,2.7906
 gpt-5.6-terra (medium),10.680097,3.827035,3.824629,9.850575,8.691056,10.38281,2.790698,2.792453,1.084211,1.228861,1.028633
 gpt-5.6-terra (high),10.782933,3.863884,3.861456,9.945423,8.610095,10.581353,2.790698,2.792453,1.084211,1.252359,1.01905
 gpt-5.6-terra (xhigh),11.010989,3.945604,3.943125,10.155767,8.867864,10.491065,2.790698,2.792453,1.084211,1.241673,1.049559
-"Median across GPT-5.x reasoning variants (rows flagged 1 in column N; live formulas, v1.0.1):",11.084301,3.971874,3.969378,10.223384,8.914835,10.576758,2.790698,2.792453,1.084211,1.251815,1.055118
+"Median across GPT-5.x reasoning variants (rows flagged 1 in column N; live formulas, v1.0.0):",11.084301,3.971874,3.969378,10.223384,8.914835,10.576758,2.790698,2.792453,1.084211,1.251815,1.055118
 Anchor and PQPC collapsed together (median / min / max across the same rows; column O):,1.42236,1.365563,2.425248,,,,,,,,
 Full envelope across the same rows: min / median / mean / max:,10.641683,11.084301,11.479747,18.899695,,,,,,,
-Staged pinch medians (Table 11a lower rows): A+PQPC+T / +R / +P; narrowing = full median ÷ pinched median:,1.14397,1.084211,1,9.689327,10.223384,11.084301,7.792892,,,,
+Staged pinch medians (Table 10a lower rows): A+PQPC+T / +R / +P; narrowing = full median ÷ pinched median:,1.14397,1.084211,1,9.689327,10.223384,11.084301,7.792892,,,,

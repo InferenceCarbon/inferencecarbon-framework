@@ -20,7 +20,7 @@ jobs:
       - name: Workbook -> paper tables
         working-directory: reproduce
         run: |
-          python tables_7_to_10.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
+          python paper_tables.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
           diff -r out/tables expected/tables
       - name: Formula audit (V6)
         working-directory: reproduce

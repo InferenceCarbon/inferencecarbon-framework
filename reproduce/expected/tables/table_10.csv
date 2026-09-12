@@ -1,7 +1,0 @@
-use_case,variant,output_tokens,shape_factor,lb_low,lb_central,lb_high,mb_low,mb_central,mb_high
-"Simple Q&A, short generation",gpt-5.6-luna (low),300,1.0,0.1,0.54,1.13,0.02,0.08,0.16
-"Drafting, summarisation",gpt-5.6-terra (low),1000,1.0,0.47,2.42,4.95,0.07,0.35,0.72
-"Light reasoning (explain, plan)",gpt-5.6-terra (medium),1000,1.0,0.46,2.41,4.92,0.07,0.35,0.72
-"Heavy reasoning, agentic work",gpt-5.6-sol (high),2000,1.0,1.95,10.21,21.15,0.28,1.49,3.09
-Long-context analysis and reporting,gpt-5.6-sol (high),10000,1.0,9.74,51.04,105.73,1.42,7.46,15.46
-"Long-context retrieval or agentic turn (50,000 in)",gpt-5.6-sol (high),1000,1.3515,1.32,6.9,14.29,0.19,1.01,2.09

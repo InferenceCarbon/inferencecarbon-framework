@@ -12,8 +12,8 @@ Case,N_in,N_out,R,S (ρ anchor),S (ρ GPT-4o),
 Anchor shape,100,300,1,1,1,
 Reasoning central shape,1000,1000,1,1.007772,1.037825,
 Jegham long prompt,10000,1500,1,1.07383,1.359338,
-"Long-context turn, sol high (Table 10 last row)",50000,1000,1.64,1.351523,2.710892,
-"Table 10 last row (sol high × 1,000 out × S anchor)",,,,,,
+"Long-context turn, sol high (Table 9 last row)",50000,1000,1.64,1.351523,2.710892,
+"Table 9 last row (sol high × 1,000 out × S anchor)",,,,,,
 ,LB low,LB central,LB high,MB low,MB central,MB high
 gCO2e per query,1.316967,6.897804,14.289768,0.192508,1.008291,2.088816
 Reasoning-variant overstatement bound ρ(R−1)/(3R) at R = 12.49 (gpt-5.4-mini xhigh),0.003589,0.017734,,,,

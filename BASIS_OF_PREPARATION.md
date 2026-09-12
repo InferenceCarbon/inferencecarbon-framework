@@ -9,8 +9,8 @@ It summarises the paper; the paper is canonical, and section references are to i
 
 Attributional estimates of the operational (GHG Protocol Scope 2 category) greenhouse-gas intensity of
 OpenAI GPT-5.x inference, stated as **gCO₂e per 1,000 output tokens** at the anchor's 1:3 input:output
-shape (Appendix D.5.1). Each figure is a central estimate with a Low and High plausibility bound (Table 9)
-and a qualitative confidence label (Table 12). They are modelled from public information and an owned
+shape (Appendix D.5.1). Each figure is a central estimate with a Low and High plausibility bound (Table 8)
+and a qualitative confidence label (Table 11). They are modelled from public information and an owned
 throughput campaign; **none is a measurement of OpenAI's energy use**, and they are not compliance-grade
 absolutes (Section 7).
 
@@ -45,10 +45,10 @@ and the reasoning multiplier (3.8, Appendix D.6).
 ## 4. Data-quality indicators
 
 Scored on the GHG Protocol Scope 3 five-indicator scale, 1 = very good … 5 = very poor, and mapped to the
-paper's Table 12 confidence labels. Scores are the authors' judgement and are the point an assurance
+paper's Table 11 confidence labels. Scores are the authors' judgement and are the point an assurance
 provider should challenge first.
 
-| Input | Technological | Temporal | Geographical | Completeness | Reliability | Table 12 |
+| Input | Technological | Temporal | Geographical | Completeness | Reliability | Table 11 |
 |---|---|---|---|---|---|---|
 | Anchor energy per query (Jegham GPT-4o-mini) | 3 — A100-era model, simulation not metering | 2 — 2025 | 2 — US | 3 — one model, two shapes | 3 — peer-reviewed preprint, model not measurement | Medium / Limited |
 | Throughput per variant (owned campaign) | 1 | 1 — in-period | 2 — one vantage point | 1 — 46 variants, 8 – 105 records each | 2 — measured; per-stream, not cluster (E.1) | Medium |
@@ -66,7 +66,7 @@ provider should challenge first.
 ## 5. Conventions a user must apply
 
 - Quote a figure with its band and confidence label, never alone (Section 8.6).
-- Where the inventory convention is not to understate, use the **High** bound of Table 9.
+- Where the inventory convention is not to understate, use the **High** bound of Table 8.
 - Location-based is the operative column for a user deciding what to run; market-based serves corporate
   accounting under the 2015 Guidance and will be re-stated when the revised standard is published (3.7, 8.5).
 - Queries far from the 1:3 shape: apply the shape correction of Appendix D.5.8.
@@ -79,7 +79,7 @@ The Low – High envelope is a plausibility band formed by compounding assigned 
 not a confidence interval and carries no probability statement (3.8). Its median top-to-bottom span is about
 11×. No absolute figure in this release could meet a 5 – 10% materiality threshold; the routing proxy alone
 moves the location-based headline by about −10% to +27% and the market-based headline from 47 to 65
-gCO₂e/kWh across Table 11's scenarios. Within-family *ratios* — one model against another at a fixed
+gCO₂e/kWh across Table 10's scenarios. Within-family *ratios* — one model against another at a fixed
 setting, or one setting against another on the same model — are known to roughly ±10% because the common
 factors cancel (Table C3), and are the figures on which a decision can safely rest.
 

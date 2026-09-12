@@ -1,4 +1,4 @@
-"Envelope log-factor report (Section 3.8 / after Table 9): ln(high/low) per factor, live formulas (v1.0.0). Larger = wider contribution. Total = sum; envelope ratio = exp(total).",,,,,,,,,,,
+"Envelope log-factor report (Section 3.8 / after Table 8): ln(high/low) per factor, live formulas (v1.0.0). Larger = wider contribution. Total = sum; envelope ratio = exp(total).",,,,,,,,,,,
 Model,ln A span,ln PQPC span,ln P span,ln T span,ln R span,Total log-width,Envelope ratio (top/bottom),,,,
 gpt-4o-mini,1.026292,0,0.080852,0.289096,0,1.396239,4.039978,,,,
 gpt-5 (non-reasoning),1.026292,1.02692,0.080852,0.238298,0,2.372362,10.722693,,,,

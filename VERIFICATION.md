@@ -10,12 +10,12 @@ frozen corpus (zip, SHA-256)             data/InferenceCarbon_corpus_frozen_2026
       │  corpus_summary.py  (filters F1–F6, seeds 20260822 / 20260823)
       ▼
 Corpus / Bootstrap / RatioEnvelopes sheets   data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx
-      │  workbook formulas (Assumptions → GridIntensity → Table7 → Table8 → C_Low/C_High → Table9)
+      │  workbook formulas (Assumptions → GridIntensity → Table6 → Table7 → C_Low/C_High → Table8)
       ▼
-tables_7_to_10.py --out                  reproduce/expected/tables/*.csv
-      │  tables_7_to_10.py --paper       cell-by-cell comparison with the .docx
+paper_tables.py --out                  reproduce/expected/tables/*.csv
+      │  paper_tables.py --paper       cell-by-cell comparison with the .docx
       ▼
-paper Tables 1, 3–5, 7–11, B1, C1–C3
+paper Tables 1, 3–5, 6–10, B1, C1–C3
 ```
 
 Each arrow is a script or a formula in the deposit. The parameter inputs that are typed into the workbook
@@ -28,8 +28,8 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
 |---|---|---|
 | V1 Corpus integrity | `shasum -a 256 -c data/InferenceCarbon_corpus_frozen_20260822.sha256` | OK |
 | V2 Corpus → workbook inputs | `python reproduce/corpus_summary.py --corpus data/InferenceCarbon_corpus_frozen_20260822.zip --out out/cs --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx` | Corpus sheet agreement report; bootstrap bands within 0.01; ratio envelopes within 0.015 (see §3 for the known differences) |
-| V3 Workbook → tables | `python reproduce/tables_7_to_10.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables && diff -r out/tables reproduce/expected/tables` | no differences |
-| V4 Tables → paper | `python reproduce/tables_7_to_10.py --workbook ... --paper <paper .docx>` | every compared cell agrees at displayed precision |
+| V3 Workbook → tables | `python reproduce/paper_tables.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables && diff -r out/tables reproduce/expected/tables` | no differences |
+| V4 Tables → paper | `python reproduce/paper_tables.py --workbook ... --paper <paper .docx>` | every compared cell agrees at displayed precision |
 | V5 Parameters → sources | open each `source_url` in `parameters/*.csv` and confirm the value | manual |
 | V6 Workbook formulas | `python reproduce/formula_audit.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx` | "undeclared numeric constants: 0", exit status 0 |
 
@@ -43,7 +43,7 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
   the residual is the random-number stream, not the method. Ratio envelopes (33 values): maximum difference
   0.014 on ratios of 1.2 – 3.5.
 - V3: expected outputs committed from this run.
-- V4: paper v1.0.0 (release candidate): Tables 7, 8, 9, B1, C1 and C2 — 1,971 numeric cells
+- V4: paper v1.0.0 (release candidate): Tables 6, 7, 8, B1, C1 and C2 — 1,971 numeric cells
   compared, 1,971 agree.
 
 ### 3.1a Author-side regeneration, 12 September 2026 (Claude Fable 5.1 at the author's direction — not independent)
@@ -56,12 +56,12 @@ recalculated output of that procedure (see reproduce/README.md, "Regenerating th
   is now the source of the values, so the random-stream residual of 3.1 is gone). The 16 discrepancies of §4
   items 1 – 4 are thereby corrected.
 - Consequence for the paper: the deposited script's random stream differs from the lost original's, so 236
-  bound cells moved at the last displayed decimal (76 in Table 9, 21 in Table C1, 139 in Table C2; largest
-  relative change ≈ 0.5%), and Table 10's bounds, Table C3's ranges and Table 11a's medians moved
+  bound cells moved at the last displayed decimal (76 in Table 8, 21 in Table C1, 139 in Table C2; largest
+  relative change ≈ 0.5%), and Table 9's bounds, Table C3's ranges and Table 10a's medians moved
   correspondingly. Central values are untouched. The paper's tables were regenerated from the workbook
-  (tracked changes, 12 September) and V4 re-run: Tables 7, 8, 9, B1, C1, C2 — 1,971 cells compared,
+  (tracked changes, 12 September) and V4 re-run: Tables 6, 7, 8, B1, C1, C2 — 1,971 cells compared,
   1,971 agree.
-- V6: `formula_audit.py` run for the first time. It found the Table 11a summary rows on the Pinching sheet to
+- V6: `formula_audit.py` run for the first time. It found the Table 10a summary rows on the Pinching sheet to
   be typed constants produced by a script not in the deposit (`build_wb46.py`); one of them was wrong (the
   "Anchor and PQPC together" narrowing was typed as 7.19×; 11.14 ÷ 1.43 = 7.79×). The rows are now live
   MEDIAN/MIN/MAX formulas over the flagged reasoning-variant rows. Audit result: 3,944 formulas, 461 declared
