@@ -25,7 +25,10 @@ deposit is self-contained:
   F6  variants with < 8 TPS records excluded from the tables and listed in the report.
 
 Usage:  python corpus_summary.py --corpus InferenceCarbon_corpus_frozen_20260822.zip --out out/
-        add --workbook OpenAIModelCalculations_v1.0.0.xlsx to diff against the deposited workbook.
+        add --workbook <xlsx> to diff against the deposited workbook (read-only check);
+        add --write-workbook <in.xlsx> <out.xlsx> to write the Corpus, TableB1, Bootstrap, RatioEnvelopes and
+        T1_GPT55_Grid input cells directly (formulas are preserved; cached values are dropped, so recalculate the
+        output before use: soffice --headless --convert-to xlsx --outdir recalc/ <out.xlsx>, or open and save in Excel).
 Deterministic: seeds 20260822 (T and R bands) and 20260823 (ratio envelopes); numpy default_rng.
 """
 import argparse, csv, glob, json, os, statistics as st, sys, tempfile, zipfile, hashlib
@@ -84,7 +87,8 @@ r2 = lambda x: None if x is None else round(x, 2)
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--corpus', required=True); ap.add_argument('--out', default='out')
-    ap.add_argument('--workbook'); a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
+    ap.add_argument('--workbook'); ap.add_argument('--write-workbook', nargs=2, metavar=('IN', 'OUT'))
+    a = ap.parse_args(); os.makedirs(a.out, exist_ok=True)
     tps, tps_day, R, floor, excl = load(a.corpus)
     labels = [l for l in tps if l == 'gpt-4o-mini' or l.startswith('gpt-5')]
     fams = sorted({l.split(' (')[0] for l in labels if l.startswith('gpt-5')})
@@ -151,6 +155,7 @@ def main():
               open(f'{a.out}/provenance.json', 'w'), indent=1)
     print('variants:', len(rows), 'thin (excluded):', thin, 'exclusions:', excl)
     if a.workbook: compare(a.workbook, rows, boot, rat)
+    if a.write_workbook: write_workbook(a.write_workbook[0], a.write_workbook[1], rows, boot, rat, R, floor)
 
 def compare(wb_path, rows, boot, rat):
     import openpyxl
@@ -180,6 +185,51 @@ def compare(wb_path, rows, boot, rat):
         if not v: print('  ratio row not in workbook:', x['numerator'], x['denominator']); continue
         if v: d += [abs(float(v[0]) - x['central']), abs(float(v[1]) - x['low']), abs(float(v[2]) - x['high'])]
     print(f'RatioEnvelopes: {len(d)} values compared, max |diff| = {max(d):.3f}')
+
+
+def write_workbook(src, dst, rows, boot, rat, R, floor):
+    """Write the corpus-derived input cells into a copy of the workbook. Only value cells that the deposited
+    workbook already holds as typed inputs are written; every formula is left untouched."""
+    import openpyxl
+    wb = openpyxl.load_workbook(src)
+    def rowmap(ws, col=2):
+        return {ws.cell(r, col).value: r for r in range(3, ws.max_row + 1) if ws.cell(r, col).value}
+    n = 0
+    ws = wb['Corpus']; rm = rowmap(ws)
+    keys = ['tps_p50', 'n_tps', 'tps_daily_mean', 'tps_daily_sd', 'days', 'R_central', 'n_R', 'R_short', 'n_short', 'R_long', 'n_long', 'R_floor', 'R_heavy', 'n_heavy']
+    for r in rows:
+        if r['label'] in rm:
+            for j, k in enumerate(keys):
+                if r[k] is not None: ws.cell(rm[r['label']], 3 + j).value = r[k]; n += 1
+    ws = wb['TableB1']; rm = rowmap(ws, 1)
+    for r in rows:
+        if r['label'] in rm:
+            for j, k in enumerate(['tps_daily_mean', 'tps_daily_sd', 'days']): ws.cell(rm[r['label']], 2 + j).value = r[k]; n += 1
+    ws = wb['Bootstrap']; rm = rowmap(ws)
+    for b in boot:
+        if b['label'] in rm:
+            rr = rm[b['label']]
+            for c, k in ((3, 'days'), (4, 'T_low'), (5, 'T_high'), (9, 'R_n'), (10, 'R_median'), (11, 'R_low'), (12, 'R_high')):
+                ws.cell(rr, c).value = b[k]; n += 1
+    ws = wb['RatioEnvelopes']
+    rm = {(ws.cell(r, 2).value, ws.cell(r, 3).value): r for r in range(3, 30) if ws.cell(r, 2).value}
+    for x in rat:
+        k = (x['numerator'], x['denominator'])
+        if k in rm:
+            ws.cell(rm[k], 10).value = x['central']; ws.cell(rm[k], 12).value = x['low']; ws.cell(rm[k], 13).value = x['high']; n += 3
+    ws = wb['T1_GPT55_Grid']
+    for r in range(3, ws.max_row + 1):
+        e = ws.cell(r, 1).value
+        if not isinstance(e, str) or e.lower() not in EFF: continue
+        lab = 'gpt-5.5 (%s)' % e.lower()
+        s_ = R.get((lab, 'short', 'reason'), []); c = R.get((lab, '1k', 'reason'), []); l = R.get((lab, '10k', 'reason'), []); h = R.get((lab, '1k', 'reason-heavy'), [])
+        vals = [r2(med(s_)), len(s_), r2(med(c)), len(c), r2(med(l)), len(l), r2(med(floor[lab])), r2(med(h)), len(h)]
+        for j, v in enumerate(vals):
+            if v is not None: ws.cell(r, 2 + j).value = v; n += 1
+    a_ = wb['Assumptions']
+    a_['A26'] = 'v1.0.1: Corpus, TableB1, Bootstrap, RatioEnvelopes and T1_GPT55_Grid input cells written by corpus_summary.py --write-workbook (seeds 20260822/20260823); no formula changed.'
+    wb.save(dst)
+    print('wrote', n, 'input cells to', dst, '- recalculate before use')
 
 if __name__ == '__main__':
     main()

@@ -31,7 +31,7 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
 | V3 Workbook → tables | `python reproduce/tables_7_to_10.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables && diff -r out/tables reproduce/expected/tables` | no differences |
 | V4 Tables → paper | `python reproduce/tables_7_to_10.py --workbook ... --paper <paper .docx>` | every compared cell agrees at displayed precision |
 | V5 Parameters → sources | open each `source_url` in `parameters/*.csv` and confirm the value | manual |
-| V6 Workbook formulas | inspect that no cell in Table7 – Table9, C_Low, C_High or GridIntensity is a typed constant except those flagged BLUE on Assumptions/GridIntensity | manual; a spot-check script is future work |
+| V6 Workbook formulas | `python reproduce/formula_audit.py --workbook data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx` | "undeclared numeric constants: 0", exit status 0 |
 
 ## 3. Verification record
 
@@ -46,13 +46,38 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
 - V4: paper v1.0.0 (release candidate): Tables 7, 8, 9, B1, C1 and C2 — 1,971 numeric cells
   compared, 1,971 agree.
 
+### 3.1a Author-side regeneration, 12 September 2026 (Claude Fable 5.1 at the author's direction — not independent)
+
+The corpus → workbook step was made mechanical before release: `corpus_summary.py --write-workbook` now writes
+the Corpus, TableB1, Bootstrap, RatioEnvelopes and T1_GPT55_Grid input cells, and the deposited workbook is the
+recalculated output of that procedure (see reproduce/README.md, "Regenerating the workbook").
+
+- V2: 644 of 644 Corpus cells agree; bootstrap bands and ratio envelopes agree to 0.0000 (the deposited script
+  is now the source of the values, so the random-stream residual of 3.1 is gone). The 16 discrepancies of §4
+  items 1 – 4 are thereby corrected.
+- Consequence for the paper: the deposited script's random stream differs from the lost original's, so 236
+  bound cells moved at the last displayed decimal (76 in Table 9, 21 in Table C1, 139 in Table C2; largest
+  relative change ≈ 0.5%), and Table 10's bounds, Table C3's ranges and Table 11a's medians moved
+  correspondingly. Central values are untouched. The paper's tables were regenerated from the workbook
+  (tracked changes, 12 September) and V4 re-run: Tables 7, 8, 9, B1, C1, C2 — 1,971 cells compared,
+  1,971 agree.
+- V6: `formula_audit.py` run for the first time. It found the Table 11a summary rows on the Pinching sheet to
+  be typed constants produced by a script not in the deposit (`build_wb46.py`); one of them was wrong (the
+  "Anchor and PQPC together" narrowing was typed as 7.19×; 11.14 ÷ 1.43 = 7.79×). The rows are now live
+  MEDIAN/MIN/MAX formulas over the flagged reasoning-variant rows. Audit result: 3,944 formulas, 461 declared
+  inputs, 0 undeclared constants.
+- Every cell changed in this round carries a cyan fill in the workbook and is listed with its old and new
+  value on the `Changes_v1.0.0` sheet (390 cells: Pinching 268, Bootstrap 76, Corpus 22, RatioEnvelopes 18,
+  T1_GPT55_Grid 4, Assumptions 2).
+
 ### 3.2 Independent reproduction
 
 **None yet.** The framework is not independently verified. See the open items below.
 
-## 4. Known discrepancies in the deposited workbook (v1.0.0)
+## 4. Discrepancies found in the 11 September workbook, and their status
 
-Recorded rather than silently corrected, so the release is what the paper was built from. To be fixed in v1.0.1.
+Items 1 – 4 were found by V2 on 11 September and corrected on 12 September by regenerating the workbook from
+the deposited script (§3.1a); item 5 is corrected in the paper by tracked change. They are kept here as the record.
 
 1. **Corpus sheet, column "R heavy (k=36)"**: 14 rows hold integers (33, 35, 37, 38, 39, 43, 44, 18) that are
    not medians; they appear to be stray counts. The heavy-task rung enters only Table 1 (GPT-5.5 family,
@@ -75,7 +100,7 @@ Recorded rather than silently corrected, so the release is what the paper was bu
    engagement on the methodology.
 2. A metered anchor: prefill and decode power on an open-weight model on rented accelerators, to test the
    1/TPS scaling law and the pre-fill ratio (paper Appendix G).
-3. A formulas audit script for V6.
+3. ~~A formulas audit script for V6.~~ Done 12 September (`reproduce/formula_audit.py`).
 4. Independent re-derivation of the parameter CSVs from their sources (V5) by someone who did not compile them.
 
 ## 6. Reproduction statement (template)

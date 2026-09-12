@@ -44,7 +44,9 @@ diff -r out/tables reproduce/expected/tables
 ```
 
 Runtime: about five seconds. To go one step further back — from the frozen corpus to the workbook's
-measured inputs — run `reproduce/corpus_summary.py` (about ten seconds; see `reproduce/README.md`).
+measured inputs — run `reproduce/corpus_summary.py` (about ten seconds), which can also regenerate the
+workbook's input sheets outright (`--write-workbook`); `reproduce/formula_audit.py` checks that no
+numeric cell on a calculation sheet is an undeclared constant. See `reproduce/README.md`.
 The full verification procedure, and what has and has not been independently verified, is in
 [VERIFICATION.md](VERIFICATION.md).
 

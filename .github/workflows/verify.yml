@@ -22,3 +22,6 @@ jobs:
         run: |
           python tables_7_to_10.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
           diff -r out/tables expected/tables
+      - name: Formula audit (V6)
+        working-directory: reproduce
+        run: python formula_audit.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx

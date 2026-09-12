@@ -6,9 +6,6 @@ archived on Zenodo with its own version DOI.
 
 ## [Unreleased]
 
-Planned for v1.0.1 (parameter/record fixes, comparability preserved): the workbook Corpus-sheet
-defects listed in [VERIFICATION.md](VERIFICATION.md) §4; Table 3 AWS contribution 37.5 → 37.3.
-
 ## [1.0.0] — 2026-09 (release candidate; date and DOI filled on release)
 
 First public release, accompanying the framework paper. Version numbering starts at 1.0.0
@@ -33,7 +30,12 @@ Paper identifiers: arXiv:TODO · version DOI 10.5281/zenodo.TODO · concept DOI 
 ### Deposit
 - `data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx` — the paper-authoritative calculation chain,
   now carrying the GridIntensity (Tables 3, 4, 5, 11) and ShapeCorrection (Appendix D.5.8) sheets.
-  Replaces `OpenAIModelCalculations_Aug2026.xlsx`.
+  Replaces `OpenAIModelCalculations_Aug2026.xlsx`. 12 September: corpus-derived input sheets written by
+  `corpus_summary.py --write-workbook` (no hand-pasted values remain); Table 11a summary rows converted
+  from typed constants to live formulas, correcting one typed value (7.19× → 7.79×); every changed cell
+  cyan-filled and listed on the `Changes_v1.0.0` sheet. The paper's bound tables (9, 10, 11a, C1 – C3)
+  were regenerated from it — 236 cells moved at the last displayed decimal (≤ 0.5%), centrals unchanged.
+- `reproduce/formula_audit.py` — VERIFICATION.md step V6; passes with zero undeclared constants.
 - `reproduce/corpus_summary.py` — regenerates the workbook's corpus-derived sheets (Corpus, Table B1,
   Bootstrap, RatioEnvelopes) from the frozen corpus with the filters stated in the paper; seeds 20260822
   and 20260823. Replaces the legacy `refresh_tables.py` / `build_final_tables.py` pair, moved to
