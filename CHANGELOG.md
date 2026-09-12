@@ -33,7 +33,7 @@ Paper identifiers: arXiv:TODO · version DOI 10.5281/zenodo.TODO · concept DOI 
   Replaces `OpenAIModelCalculations_Aug2026.xlsx`. 12 September: corpus-derived input sheets written by
   `corpus_summary.py --write-workbook` (no hand-pasted values remain); Table 10a summary rows converted
   from typed constants to live formulas, correcting one typed value (7.19× → 7.79×); every changed cell
-  cyan-filled and listed on the `Changes_v1.0.0` sheet. The paper's bound tables (9, 10, 11a, C1 – C3)
+  cyan-filled and listed on the `Changes_v1.0.0` sheet. The paper's bound tables (then numbered 9, 10, 11a, C1 – C3; now 8, 9, 10a, C1 – C3)
   were regenerated from it — 236 cells moved at the last displayed decimal (≤ 0.5%), centrals unchanged.
 - `reproduce/formula_audit.py` — VERIFICATION.md step V6; passes with zero undeclared constants.
 - 12 September, second round: paper tables resequenced in order of appearance (main text 1 – 11 with
