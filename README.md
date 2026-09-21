@@ -95,7 +95,7 @@ subsetted and built upon.
   from it, including by commercial auditors and assurance providers, is
   permitted and welcomed. What the non-commercial term withholds is the
   assembly of deposited corpora into a commercial data product.
-- The licences govern the compiled datasets, not the individual measured
+- The licenses govern the compiled datasets, not the individual measured
   facts, which may be used freely. No trademark rights are granted. The paper
   text is licensed separately (CC BY-NC-ND 4.0 in its preprint versions).
   Paper Section 8.2 and Appendix H.1 are canonical.
@@ -103,7 +103,7 @@ subsetted and built upon.
 The live operational stack (multi-vantage scheduling, model manifests and
 quality-assurance layers) and the live measurement database served through
 the InferenceCarbon.ai API are not published here; the API's terms of
-service are the operative licence for that service
+service are the operative license for that service
 (methodology@inferencecarbon.ai).
 
 ## How to cite

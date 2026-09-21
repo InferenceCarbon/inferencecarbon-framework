@@ -18,8 +18,8 @@ replicator can verify what they fetched. The benchmark campaign continues
 beyond the paper's window; the ongoing series is operated through the
 InferenceCarbon.ai API rather than deposited. The full corpus and summary
 workbooks are deposited at major versions only; minor releases deposit only
-the workbooks their changed tables consume. Deposited artefacts carry the
-class licences of paper Section 8.2 and Appendix H.1 whatever the release
+the workbooks their changed tables consume. Deposited artifacts carry the
+class licenses of paper Section 8.2 and Appendix H.1 whatever the release
 class: Apache 2.0 for software, CC BY 4.0 for the summary workbooks and
 parameter tables, and CC BY-NC 4.0 (with an express permission for
 verification and assurance use) for the raw corpus.
@@ -52,7 +52,7 @@ version they were computed under.
 Corrections, additional empirical data and per-model disclosures are
 welcome: methodology@inferencecarbon.ai.
 
-## Paper-authoritative artefacts
+## Paper-authoritative artifacts
 
 Within a release the workbook `data/workbooks/OpenAIModelCalculations_<version>.xlsx` is the
 authoritative calculation chain: paper tables are regenerated from it, never edited by hand, and
@@ -61,9 +61,9 @@ measured inputs; `reproduce/corpus_summary.py` is the check on the workbook's Co
 RatioEnvelopes sheets. Where the paper, the workbook and the corpus disagree, the corpus wins, then
 the workbook, and the discrepancy is logged in VERIFICATION.md §4 until the next release fixes it.
 
-## Deposit contents and licences per release class
+## Deposit contents and licenses per release class
 
-| Release class | Deposited on Zenodo | Licences |
+| Release class | Deposited on Zenodo | Licenses |
 |---|---|---|
 | Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY 4.0; raw corpus: CC BY-NC 4.0 with the verification and assurance permission (see LICENSE, LICENSE-DATA) |
 | Minor (vX.Y) | Repository snapshot and the summary workbooks the release's changed tables consume | Software: Apache 2.0; summary workbooks and parameter tables: CC BY 4.0 (see LICENSE, LICENSE-DATA) |

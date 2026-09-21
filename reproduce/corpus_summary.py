@@ -17,7 +17,7 @@ Filters (paper Appendix B.4 and D.5.5), stated here so the deposit is self-conta
       'reason' cells, min_answer_met (an answer that stopped short of the prompt's word minimum is a
       truncation, not a reasoning measurement). The k = 36 'reason-heavy' rung is
       not subject to the word-minimum test (its answers are puzzle solutions, not summaries). Records clamped to
-      max_tokens < 2000 are excluded (truncation artefact).
+      max_tokens < 2000 are excluded (truncation artifact).
   F4  TPS series: workload 10k, prompt_class summarise, ok, output_tps_o200k present.
   F5  R floors: hidden-token ratio on the 10k summarise records (visible > 50).
   F6  variants with < 8 TPS records excluded from the tables and listed in the report.
@@ -141,7 +141,7 @@ def main():
             return t, rr, np.median(dm), (np.median(c) if len(c) else 1.0)
         tn, rn_, tpn, rcn = draw(num); td, rd, tpd, rcd = draw(den)
         ratio = (rn_ / rd) * (td / tn)
-        boot_point = (rcn / rcd) * (tpd / tpn)                       # bootstrap centre (median of daily medians)
+        boot_point = (rcn / rcd) * (tpd / tpn)                       # bootstrap center (median of daily medians)
         central = (rcn / rcd) * (med(tps[den]) / med(tps[num]))      # deposited central: Corpus P50 throughput
         lo, hi = np.percentile(ratio, 5) / boot_point, np.percentile(ratio, 95) / boot_point   # relative factors
         rat.append(dict(numerator=ROW_LABEL.get(num, num), denominator=ROW_LABEL.get(den, den), central=round(float(central), 3),

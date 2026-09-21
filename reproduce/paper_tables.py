@@ -27,7 +27,7 @@ SHEETS = {  # sheet -> (output file, header row, first data row, last column)
 }
 TABLE9 = [  # Table 9 rows: (use case, variant, output tokens, shape factor S from ShapeCorrection!E17 or 1)
     ('Simple Q&A, short generation', 'gpt-5.6-luna (low)', 300, None),
-    ('Drafting, summarisation', 'gpt-5.6-terra (low)', 1000, None),
+    ('Drafting, summarization', 'gpt-5.6-terra (low)', 1000, None),
     ('Light reasoning (explain, plan)', 'gpt-5.6-terra (medium)', 1000, None),
     ('Heavy reasoning, agentic work', 'gpt-5.6-sol (high)', 2000, None),
     ('Long-context analysis and reporting', 'gpt-5.6-sol (high)', 10000, None),

@@ -36,7 +36,7 @@ parent of the working directory. Key files are gitignored
 - `BUNDLE_NOTES.md` records the export audit and what was deliberately
   excluded from `engine/` (run logs and spend state; the raw corpus is
   deposited under `../data/`).
-- The contact address in the scheduled prompts was normalised to
+- The contact address in the scheduled prompts was normalized to
   methodology@inferencecarbon.ai for publication.
 - Comparison pollers for third-party benchmark series are part of the
   operational stack and are not published here; no third-party series

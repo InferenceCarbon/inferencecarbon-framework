@@ -4,7 +4,7 @@
 The corpus ships in this repository (data/InferenceCarbon_corpus_frozen_*.zip)
 and is mirrored in the Zenodo deposit. This script downloads every file listed
 in the Zenodo record and checks its SHA-256 against the manifest (manifest.csv),
-so a replicator can prove the corpus they analyse is the corpus that was frozen
+so a replicator can prove the corpus they analyze is the corpus that was frozen
 - and that the two copies are byte-identical.
 
 Usage:

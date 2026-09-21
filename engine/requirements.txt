@@ -8,5 +8,5 @@
 # it are recorded in the paper's data-availability statement.
 
 openai>=1.40           # OpenAI-compatible streaming client (points at each provider base_url)
-tiktoken>=0.7          # o200k_base tokenizer for cross-provider token normalisation
+tiktoken>=0.7          # o200k_base tokenizer for cross-provider token normalization
 openpyxl>=3.1          # engine + daily workbook output
