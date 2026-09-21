@@ -43,8 +43,9 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
   "Regenerating the workbook"). Output identical to `reproduce/expected/corpus_summary/`.
 - V3: output identical to `reproduce/expected/tables/`.
 - V4: paper v1.0.0: Tables 6, 7, 8, B1, C1 and C2 — 1,971 numeric cells compared, 1,971 agree. Tables 1,
-  3 – 5, 9 – 11, C3 and D1 checked against the exported CSVs by hand.
-- V6: 3,943 formulas, 461 declared inputs, 0 undeclared constants.
+  3 – 5, 9 – 11 (Table 10 in full, including the GCP-excluded and single-provider rows), C3 and D1 checked
+  against the exported CSVs by hand.
+- V6: 3,954 formulas, 475 declared inputs, 0 undeclared constants.
 
 ### 3.2 Independent reproduction
 

@@ -26,4 +26,10 @@ Azure-dominant illustration (70 / 10 / 5 / 15),0.7,0.1,0.05,0.15,411,65.38761
 Contract-weighted central (23.4 / 39.3 / 11.7 / 25.5),0.234,0.393,0.117,0.255,352.713,51.628938
 Procurement-lag scenario: Stargate uncredited (23.4 / 39.3 / 11.7 / 25.5),0.234,0.393,0.117,0.255,352.713,158.917938
 Stargate-ramped illustration (15 / 70 / 5 / 10),0.15,0.7,0.05,0.1,339.8,49.608407
+GCP excluded scenario (31.5 / 52.8 / 15.7 / 0),0.314516,0.528226,0.157258,0,359.258065,47.258065
+Single-provider floor: all-AWS (0 / 0 / 100 / 0),0,0,1,0,319,0
+"Single-provider, all-Azure (100 / 0 / 0 / 0): market-based comparator",1,0,0,0,447,73
+"Single-provider ceiling: all-Stargate, gas-only scenario (0 / 100 / 0 / 0)",0,1,0,0,500,500
+"Oracle/Stargate gas-only scenario intensity, location- and market-based (gCO2e/kWh)",500,,"Appendix D.3 / Appendix A.4: all-gas simple-cycle combustion, combustion-only basis; an off-grid gas microgrid carries no clean-energy credit, so the same figure applies on both bases",,,
 Procurement-lag row credits Oracle/Stargate at its location-based intensity (319) rather than its reported FY25 market-based Scope 2 (46).,,,,,,
+GCP excluded row renormalises the Azure / Oracle-Stargate / AWS shares of rows 16 – 18 to sum to 100% (Appendix E.6). Single-provider rows bound Table 10: the floor and ceiling a reader reaches by routing all inference to one provider.,,,,,,
