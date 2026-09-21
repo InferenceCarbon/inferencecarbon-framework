@@ -1,5 +1,5 @@
 {
-  "_comment": "Curated + locked. DeepSeek V4 honours reasoning_effort (verified), so models are broken out across efforts. CAUTION: campaign data shows 'minimal' still thinks (v4-pro minimal ~687 reasoning tok), so it displays as non-reasoning but is NOT a clean R=1 baseline. deepseek-chat PROBED 2026-07-23 and VERIFIED as a clean baseline: no reasoning-token field, TTFT=TTFAT (no thinking phase), native~=o200k — and it RESOLVES TO deepseek-v4-flash, so it baselines the flash class only; no pro-class non-thinking baseline is exposed. Edit by hand; discovery only reports new ids, does not auto-add.",
+  "_comment": "Curated + locked. DeepSeek V4 honors reasoning_effort (verified), so models are broken out across efforts. CAUTION: campaign data shows 'minimal' still thinks (v4-pro minimal ~687 reasoning tok), so it displays as non-reasoning but is NOT a clean R=1 baseline. deepseek-chat PROBED 2026-07-23 and VERIFIED as a clean baseline: no reasoning-token field, TTFT=TTFAT (no thinking phase), native~=o200k — and it RESOLVES TO deepseek-v4-flash, so it baselines the flash class only; no pro-class non-thinking baseline is exposed. Edit by hand; discovery only reports new ids, does not auto-add.",
   "provider": "deepseek",
   "locked": true,
   "efforts": ["minimal", "high"],

@@ -55,7 +55,7 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
 
 None known between the corpus, the deposited workbook and the paper's tables at this release. Discrepancies
 found after release are recorded here until the next release corrects them (VERSIONING.md,
-"Paper-authoritative artefacts").
+"Paper-authoritative artifacts").
 
 One rule is worth restating because a verifier will meet it: the word-minimum filter (an answer that stops
 short of the prompt's word minimum is excluded) applies to the fixed-task reasoning cells and not to the

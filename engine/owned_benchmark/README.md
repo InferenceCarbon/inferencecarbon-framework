@@ -15,7 +15,7 @@ tokens, a clean TTFT/decode split).
   effort variants onto `reasoning_effort` parameters, and writes `manifest.json`.
   **New-model detection** is built in: it reports models added/removed since the last manifest.
 - `run` — for each manifest entry, sends streamed requests and records the full per-request
-  vector; summarises as P50 across repeats; writes JSON + an Excel workbook.
+  vector; summarizes as P50 across repeats; writes JSON + an Excel workbook.
 
 ## Alignment with standard throughput-benchmark methodology
 | Common practice | Here |
@@ -24,19 +24,19 @@ tokens, a clean TTFT/decode split).
 | `temperature 0, top_p 1` | Same (auto-dropped for reasoning models that reject them) |
 | Streaming; TTFT = first token, TTFAT = first answer token | Same |
 | Output speed measured after the first token | Same (`output_tps_*` over `t_end − TTFT`) |
-| Token counts standardised in `o200k_base` | Same (`*_o200k`), **and** native counts kept |
+| Token counts standardized in `o200k_base` | Same (`*_o200k`), **and** native counts kept |
 | P50 representation | P50 across repeats (persist runs to span a rolling window) |
 | Official OpenAI library | Same |
 
 ## Deliberate deviations (and why)
 - **Native token counts kept alongside o200k_base.** Energy is consumed per *native* token
-  the hardware emits; o200k normalisation is a comparability choice, not an energy
+  the hardware emits; o200k normalization is a comparability choice, not an energy
   denominator. We record both.
 - **Reasoning tokens captured** from `usage.completion_tokens_details` — needed for the
   `e_reasoning × hidden_tokens` term; public trackers do not expose per-call reasoning counts.
 - **Our own prompts**, generated to the token budget, so the measurements are ours to publish.
 - **Concurrency.** Default is single-stream (the usual headline figure). Note that single-stream is
-  latency-optimised and *not* energy-representative; a higher-concurrency scenario is the
+  latency-optimized and *not* energy-representative; a higher-concurrency scenario is the
   recommended next addition.
 
 ## Mapping to the energy model
@@ -91,7 +91,7 @@ small; cap with `--max-output`; consider running reasoning variants less often. 
 - **Reasoning TTFT.** If a provider does not stream reasoning tokens, TTFT collapses onto the
   first answer token and "thinking time" shows up as a long TTFT — give reasoning runs ample
   `--max-output` so they actually produce an answer.
-- **Quantisation** is provider-controlled and undisclosed; it confounds both speed and energy.
+- **Quantization** is provider-controlled and undisclosed; it confounds both speed and energy.
 - **Not legal advice.** Methodology is grounded in standard practice; data and prompts are ours.
 
 ## Dependencies
@@ -115,7 +115,7 @@ Implements the data-collection changes from the comparison review.
   ('minimal' = off = R=1 baseline); deepseek-chat tracked as candidate true baseline;
   new `probe` subcommand verifies effort binding for pennies BEFORE a ladder is enabled.
 - **Tier 3 (sampling):** per-model `repeats` (gemini-2.5-flash, the Gemini-paper anchor,
-  now 5/fire); `--jitter` de-synchronises fire times; daily sheets pool ONLY the 10k
+  now 5/fire); `--jitter` de-synchronizes fire times; daily sheets pool ONLY the 10k
   summarise series — riders stay in the JSON corpus.
 - **Before the rider campaign:** run the probes in the tracked-file comments (Anthropic
   thinking, Gemini reasoning_effort, deepseek-chat baseline). Run reasoning riders
