@@ -22,10 +22,10 @@ import sys
 import urllib.request
 from pathlib import Path
 
-# Version record of the frozen corpus deposit (reserved 7 Aug 2026,
-# DOI 10.5281/zenodo.21840989). A version record, not the concept record, so
-# the fetched bytes can never silently change. The deposit publishes at the
-# 18 Aug 2026 data freeze; until then this id will not resolve.
+# Version record of the frozen corpus deposit (DOI 10.5281/zenodo.21840989).
+# A version record, not the concept record, so the fetched bytes can never
+# silently change. The deposit publishes with the v1.0.0 release; until then
+# this id will not resolve.
 DEFAULT_RECORD_ID = "21840989"
 
 ZENODO_API = "https://zenodo.org/api/records/{record_id}"

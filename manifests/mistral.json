@@ -1,5 +1,5 @@
 {
-  "_comment": "Generated 2026-08-07; counts and dates refreshed 2026-08-26 from the frozen 22 Aug 2026 corpus (14,733 records) from the owned-benchmark corpus (7,378 run records; variant_dates compiled by Cowork from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
+  "_comment": "Counts and dates are from the frozen 22 Aug 2026 corpus (14,733 request records; variant_dates compiled from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
   "provider": "mistral",
   "campaign_window": {
     "start": "2026-06-25",

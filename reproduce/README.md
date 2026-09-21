@@ -37,6 +37,3 @@ rounds to six decimals, so the diff should still be silent.
 
 Filters, seeds and exclusions are stated in each script's docstring and in the paper (Appendix B.4, D.5.5, D.6).
 `expected/corpus_summary/provenance.json` records the exclusion counts of the deposited run.
-
-`legacy/` holds the 23 August 2026 refresh scripts that produced the review draft's tables; they are
-superseded and kept for the audit trail only.

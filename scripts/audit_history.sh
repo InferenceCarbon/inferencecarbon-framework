@@ -59,7 +59,10 @@ cat <<'EOF'
  [ ] Read the prompt corpus once, deliberately — the hard-task reasoning
      prompts and the 10,000-token inputs will be public.
  [ ] No third-party benchmark series values anywhere (Section 5.3).
- [ ] No billing/budget configuration: account ids, org ids, spend caps.
+ [ ] No billing account identifiers: account ids, org ids, payment details.
+     (The frozen campaign's per-provider budget caps and spend estimates are
+     published deliberately: providers.json, the scheduled prompts and the
+     corpus run logs.)
 EOF
 
 note "Result"

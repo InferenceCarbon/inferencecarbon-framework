@@ -2,9 +2,10 @@
 
 ## What this is
 
-The repository accompanying *A Bounded Estimation Framework for the
-Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure*
-(Manktelow, 2026): the collection engine, the parameter tables, and the
+The repository accompanying *"So, What's the Carbon Cost of Using AI?" A
+Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of
+Large Language Model Inference Under Limited Disclosure, Using the Worked
+Example of OpenAI's GPT-5 Model Family* (Manktelow, 2026): the collection engine, the parameter tables, and the
 scripts that reproduce the paper's tables.
 
 - Paper: arXiv:TODO <!-- fill on submission day, then run the link check -->
@@ -23,8 +24,7 @@ engine/         Collection engine (paper Appendix B): benchmark, drivers, schedu
 manifests/      Tracked-model manifests, one per provider, with entry/retirement dates
 calibration/    Tokenizer calibration (o200k_base vs native); the canonical basis statement
 parameters/     Everything Appendix A tabulates, with per-row source and access date
-data/           Corpus checksum manifest, Zenodo fetch script, derived workbooks
-data/external/  What is deliberately absent, and why
+data/           Frozen corpus and checksum manifest, Zenodo fetch script, derived workbooks
 reproduce/      corpus_summary.py (corpus → workbook inputs) and paper_tables.py (workbook → tables, paper check); expected outputs committed
 briefs/         Per-brief data folders and reproduce scripts
 BASIS_OF_PREPARATION.md   Boundary, method, conventions, data-quality indicators — for inventory preparers and assurance providers
@@ -66,7 +66,7 @@ records, 24 Jun – 22 Aug 2026) and is mirrored in the Zenodo data deposit.
 Both copies verify against the same SHA-256 in `data/manifest.csv`:
 
 ```bash
-shasum -a 256 -c data/InferenceCarbon_corpus_frozen_20260822.sha256
+(cd data && shasum -a 256 -c InferenceCarbon_corpus_frozen_20260822.sha256)
 ```
 
 To fetch and verify the Zenodo mirror instead:
@@ -87,10 +87,18 @@ subsetted and built upon.
 
 - **Code** — [Apache 2.0](LICENSE): the same openness as MIT with an
   explicit patent grant and no implied trademark rights.
-- **Data, parameters and workbooks** — [CC BY 4.0](LICENSE-DATA):
-  major-version deposit artefacts; attribution is the only condition. The
-  licence governs the compiled dataset, not the individual measured facts,
-  which may be used freely.
+- **Summary workbooks and parameter tables** — [CC BY 4.0](LICENSE-DATA):
+  these exist to be recomputed, subsetted and built upon; attribution is the
+  only condition.
+- **Frozen raw measurement corpus** — [CC BY-NC 4.0](LICENSE-DATA), with an
+  express permission: use of the corpus to verify or assure figures derived
+  from it, including by commercial auditors and assurance providers, is
+  permitted and welcomed. What the non-commercial term withholds is the
+  assembly of deposited corpora into a commercial data product.
+- The licences govern the compiled datasets, not the individual measured
+  facts, which may be used freely. No trademark rights are granted. The paper
+  text is licensed separately (CC BY-NC-ND 4.0 in its preprint versions).
+  Paper Section 8.2 and Appendix H.1 are canonical.
 
 The live operational stack (multi-vantage scheduling, model manifests and
 quality-assurance layers) and the live measurement database served through
