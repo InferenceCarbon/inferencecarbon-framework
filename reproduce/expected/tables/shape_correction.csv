@@ -1,4 +1,4 @@
-"ShapeCorrection — Appendix D.5.8 (v1.0.0, 11 Sep 2026). Two-point fits E = a·N_in + b·N_out to Jegham et al. [15] v6 short (100/300) and long (10,000/1,500) prompts; shape factor S. BLUE = input.",,,,,,
+"ShapeCorrection — Appendix D.5.8 (v1.0.0). Two-point fits E = a·N_in + b·N_out to Jegham et al. [15] v6 short (100/300) and long (10,000/1,500) prompts; shape factor S. Typed values are inputs; every other number is a formula.",,,,,,
 ,GPT-4o-mini (anchor),GPT-4o,,,,
 Short prompt Wh (100 in / 300 out) [15],0.577,0.423,,,,
 "Long prompt Wh (10,000 in / 1,500 out) [15]",3.098,2.875,,,,

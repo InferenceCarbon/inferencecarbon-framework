@@ -1,7 +1,7 @@
 # Tracked-model manifests
 
-One JSON file per provider, generated 2026-08-07 from the owned-benchmark
-corpus (7,378 run records) and the campaign retirement record. Each entry
+One JSON file per provider, compiled from the frozen owned-benchmark corpus
+(14,733 request records) and the campaign retirement record. Each entry
 carries the model id **exactly as the API names it**, the family, the effort
 settings measured, and the campaign dates — so that when a brief has to
 explain, say, that its anchor model was retired from the API (as the Gemini

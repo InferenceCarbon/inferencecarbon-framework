@@ -8,7 +8,7 @@ message: >-
   specific calculation, the concept DOI for the framework as a whole, and the
   arXiv identifier for the text. A headline figure should always travel with
   its plausibility band and its confidence label.
-title: "InferenceCarbon: A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure"
+title: "InferenceCarbon framework: \"So, What's the Carbon Cost of Using AI?\" A Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of Large Language Model Inference Under Limited Disclosure, Using the Worked Example of OpenAI's GPT-5 Model Family"
 type: software
 version: 1.0.0
 date-released: 2026-09-21   # TODO confirm on release day
@@ -25,7 +25,7 @@ license: Apache-2.0
 repository-code: "https://github.com/InferenceCarbon/inferencecarbon-framework"
 preferred-citation:
   type: article
-  title: "A Bounded Estimation Framework for the Per-Token Carbon Intensity of LLM Inference Under Limited Disclosure"
+  title: "\"So, What's the Carbon Cost of Using AI?\" A Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of Large Language Model Inference Under Limited Disclosure, Using the Worked Example of OpenAI's GPT-5 Model Family"
   authors:
     - family-names: Manktelow
       given-names: James

@@ -10,15 +10,13 @@ InferenceCarbon framework v1.0.0. Reproduces, from InferenceCarbon_corpus_frozen
   bootstrap.csv   the Bootstrap sheet (T and R bands, B = 10,000)          — paper Appendix D.6
   ratios.csv      the RatioEnvelopes bootstrap (5th/95th of within-family ratios) — Table C3
 
-Filters are the 'cleared-down' set of refresh_tables.py (paper Appendix B.4), restated here so the
-deposit is self-contained:
+Filters (paper Appendix B.4 and D.5.5), stated here so the deposit is self-contained:
   F1  mock records excluded; provider == openai only.
   F2  reasoning (R) cells: prompt_class in {reason, reason-heavy}, prompt_version == 2 only.
   F3  R cells require ok, reasoning_tokens present, visible (o200k) > 50 and, for the fixed-task
       'reason' cells, min_answer_met (an answer that stopped short of the prompt's word minimum is a
-      truncation, not a reasoning measurement; added 2026-09-10). The k = 36 'reason-heavy' rung is
-      not subject to the word-minimum test (its answers are puzzle solutions, not summaries) — the
-      deposited workbook's heavy column was computed on that basis. Records clamped to
+      truncation, not a reasoning measurement). The k = 36 'reason-heavy' rung is
+      not subject to the word-minimum test (its answers are puzzle solutions, not summaries). Records clamped to
       max_tokens < 2000 are excluded (truncation artefact).
   F4  TPS series: workload 10k, prompt_class summarise, ok, output_tps_o200k present.
   F5  R floors: hidden-token ratio on the 10k summarise records (visible > 50).

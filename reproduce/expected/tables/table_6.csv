@@ -47,4 +47,4 @@ gpt-5.6-terra (low),1.923333,93.61,0.836449,1.60877,1.05,1.689209,2.99,5.050735,
 gpt-5.6-terra (medium),1.923333,94.86,0.825427,1.587571,1.05,1.66695,2.99,4.98418,Medium,1.37,6.828326
 gpt-5.6-terra (high),1.923333,95.52,0.819724,1.576602,1.05,1.655432,2.99,4.949741,High,1.45,7.177125
 gpt-5.6-terra (xhigh),1.923333,95.22,0.822306,1.581569,1.05,1.660647,2.99,4.965336,xHigh,1.68,8.341764
-"gpt-5.6-sol (max)*: xhigh values carried as explicit floors (limitation 18; tier not measured before the close). All 46 measured variants are carried (v1.0.0, Lo Piano M5); the gpt-5 effort ladder is non-monotonic (R 6.12 at high, 3.75 at xhigh).",,,,,,,,,,,
+"gpt-5.6-sol (max)*: xhigh values carried as explicit floors (limitation 18; tier not measured before the close). All 46 measured variants are carried; the gpt-5 effort ladder is non-monotonic (R 6.12 at high, 3.75 at xhigh).",,,,,,,,,,,

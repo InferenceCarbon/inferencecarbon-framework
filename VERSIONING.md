@@ -10,16 +10,19 @@ This repository is the **mutable** working copy of the framework:
 methodology, parameter tables and scripts are maintained here as a living
 document. The **citable record** for each release is an immutable archive on
 Zenodo, which mints a persistent DOI per tagged release. The raw per-request
-measurement corpus for the paper's window, and the release snapshot of the
-collection engine, live in the frozen Zenodo deposit — not in git.
+measurement corpus for the paper's window ships in this repository as
+`data/InferenceCarbon_corpus_frozen_20260822.zip` and is mirrored, with the
+release snapshot of the collection engine, in the frozen Zenodo deposit.
 `data/manifest.csv` holds the SHA-256 of every deposited corpus file so a
 replicator can verify what they fetched. The benchmark campaign continues
 beyond the paper's window; the ongoing series is operated through the
-InferenceCarbon.ai API rather than deposited. Subsequent minor releases
-deposit the summary workbooks their tables consume, with a full corpus
-deposit at each major version. Every deposited artefact carries the same
-licence pair — Apache 2.0 for code, CC BY 4.0 for data — regardless of
-release class.
+InferenceCarbon.ai API rather than deposited. The full corpus and summary
+workbooks are deposited at major versions only; minor releases deposit only
+the workbooks their changed tables consume. Deposited artefacts carry the
+class licences of paper Section 8.2 and Appendix H.1 whatever the release
+class: Apache 2.0 for software, CC BY 4.0 for the summary workbooks and
+parameter tables, and CC BY-NC 4.0 (with an express permission for
+verification and assurance use) for the raw corpus.
 
 ## Version numbers
 
@@ -62,5 +65,5 @@ the workbook, and the discrepancy is logged in VERIFICATION.md §4 until the nex
 
 | Release class | Deposited on Zenodo | Licences |
 |---|---|---|
-| Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Code: Apache 2.0; data: CC BY 4.0 (see LICENSE, LICENSE-DATA) |
-| Minor (vX.Y) | Repository snapshot and the summary workbooks the release's tables consume | Code: Apache 2.0; data: CC BY 4.0 (see LICENSE, LICENSE-DATA) |
+| Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY 4.0; raw corpus: CC BY-NC 4.0 with the verification and assurance permission (see LICENSE, LICENSE-DATA) |
+| Minor (vX.Y) | Repository snapshot and the summary workbooks the release's changed tables consume | Software: Apache 2.0; summary workbooks and parameter tables: CC BY 4.0 (see LICENSE, LICENSE-DATA) |

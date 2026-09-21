@@ -33,10 +33,9 @@ parent of the working directory. Key files are gitignored
 
 ## Provenance notes
 
-- Assembled from the working campaign machine on 2026-08-07
-  (`BUNDLE_NOTES.md` records the export audit and what was deliberately
-  excluded — the raw corpus, run logs and spend state, which belong to the
-  Zenodo deposit, not to git).
+- `BUNDLE_NOTES.md` records the export audit and what was deliberately
+  excluded from `engine/` (run logs and spend state; the raw corpus is
+  deposited under `../data/`).
 - The contact address in the scheduled prompts was normalised to
   methodology@inferencecarbon.ai for publication.
 - Comparison pollers for third-party benchmark series are part of the

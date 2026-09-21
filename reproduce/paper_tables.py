@@ -23,7 +23,7 @@ SHEETS = {  # sheet -> (output file, header row, first data row, last column)
     'C_Low': ('table_c1_low.csv', 2, 3, 12), 'C_High': ('table_c2_high.csv', 2, 3, 12),
     'TableB1': ('table_b1.csv', 2, 3, 4), 'T1_GPT55_Grid': ('table_1.csv', 2, 3, 10),
     'RatioEnvelopes': ('table_c3.csv', 2, 3, 15), 'ShapeCorrection': ('shape_correction.csv', None, None, 7),
-    'Levers': ('levers_log_spans.csv', None, None, 12), 'Pinching': ('table_10a.csv', None, None, 12),
+    'Levers': ('levers_log_spans.csv', None, None, 12), 'Pinching': ('table_11.csv', None, None, 12),
 }
 TABLE9 = [  # Table 9 rows: (use case, variant, output tokens, shape factor S from ShapeCorrection!E17 or 1)
     ('Simple Q&A, short generation', 'gpt-5.6-luna (low)', 300, None),
