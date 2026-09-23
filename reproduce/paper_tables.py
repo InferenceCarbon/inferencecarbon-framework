@@ -35,8 +35,12 @@ TABLE9 = [  # Table 9 rows: (use case, variant, output tokens, shape factor S fr
 ]
 
 def val(ws, r, c):
+    """Cell value for export. Every non-boolean number is written as a float rounded to 6 dp, so a
+    workbook recalculated by LibreOffice (which stores integer-valued results as integers) exports
+    byte-identically to one saved by Excel (which stores them as floats): 411 and 411.0 both become 411.0."""
     v = ws.cell(r, c).value
-    return round(v, 6) if isinstance(v, float) else v
+    if isinstance(v, bool): return v
+    return round(float(v), 6) if isinstance(v, (int, float)) else v
 
 def export(wb, out):
     os.makedirs(out, exist_ok=True); missing = 0
