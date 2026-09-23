@@ -1,8 +1,8 @@
 "Table 1 — GPT-5.5 measured reasoning-mode multipliers: difficulty x length grid (medians, v2 fixed-task records, frozen corpus).",,,,,,,,,
 Mode,Hard-short (100/300),n,Hard-medium (1k/1k),n,Hard-long (10k/1.5k),n,Easy floor (10k summarise),Heavy task k=36 (1k),n
-Minimal,2.07,37,1.71,39,1.84,4,1.02,5.82,12
-Low,1.64,37,1.45,39,1.34,4,1.01,2.07,20
-Medium,2.01,37,1.69,39,1.54,4,1.02,3.21,12
-High,2.99,36,2.39,39,2.2,4,1.14,4.93,12
-xHigh,3.52,37,2.46,38,2.76,3,1.29,5.62,12
-"Hard-long cells carry small n (2-4): reported with that caveat. Heavy task (36-element puzzle, added 30 Jul) is the task-demand sensitivity: reported separately, NOT compounded into Table 8 bands.",,0,,0,,0,,,0
+Minimal,2.07,37.0,1.71,39.0,1.84,4.0,1.02,5.82,12.0
+Low,1.64,37.0,1.45,39.0,1.34,4.0,1.01,2.07,20.0
+Medium,2.01,37.0,1.69,39.0,1.54,4.0,1.02,3.21,12.0
+High,2.99,36.0,2.39,39.0,2.2,4.0,1.14,4.93,12.0
+xHigh,3.52,37.0,2.46,38.0,2.76,3.0,1.29,5.62,12.0
+"Hard-long cells carry small n (2-4): reported with that caveat. Heavy task (36-element puzzle, added 30 Jul) is the task-demand sensitivity: reported separately, NOT compounded into Table 8 bands.",,0.0,,0.0,,0.0,,,0.0
