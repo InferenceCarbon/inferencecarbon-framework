@@ -9,8 +9,8 @@ follow the chain from raw record to published cell with no step that depends on 
 frozen corpus (zip, SHA-256)             data/InferenceCarbon_corpus_frozen_20260822.zip
       │  corpus_summary.py  (filters F1–F6, seeds 20260822 / 20260823)
       ▼
-Corpus / Bootstrap / RatioEnvelopes sheets   data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx
-      │  workbook formulas (Assumptions → GridIntensity → Table6 → Table7 → C_Low/C_High → Table8)
+Corpus / Bootstrap / Ratio Envelopes sheets   data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx
+      │  workbook formulas (Assumptions → Grid Intensity Data → Table 6 → Table 7 → C_Low/C_High → Table 8)
       ▼
 paper_tables.py --out                  reproduce/expected/tables/*.csv
       │  paper_tables.py --paper       cell-by-cell comparison with the .docx
@@ -46,6 +46,15 @@ and access date in `parameters/*.csv`, and every one is a public document a veri
   3 – 5, 9 – 11 (Table 10 in full, including the GCP-excluded and single-provider rows), C3 and D1 checked
   against the exported CSVs by hand.
 - V6: 3,954 formulas, 475 declared inputs, 0 undeclared constants.
+
+### 3.1b Final workbook, 23 September 2026 (Claude Fable 5.1 at the author's direction — not independent)
+
+The final v1.0.0 workbook (SHA-256 `6692fd642a043fc5eda7ab9cd3714b663fae3e01e0e1d7b1c5bc4da4fe03e693`) replaces the 21 September deposit. Its sheet names follow the paper's table numbers (GridIntensity → Grid Intensity Data, Table6 / Table7 / Table8 → Table 6 / Table 7 / Table 8, T1_GPT55_Grid → Table 1, TableB1 → Table B1, RatioEnvelopes → Ratio Envelopes, Levers → Table 8 - Log Widths, ShapeCorrection → Shape Correction); its note cells cite the final paper's reference numbers (Jegham [16], Microsoft FY2025 [33], Oracle [17]). Cell-by-cell comparison with the previous deposit: no value, text or formula differs beyond those notes. Scripts, `declared_inputs.json` and the expected outputs follow the new names.
+
+- V2: 644 of 644 Corpus cells agree; Bootstrap maximum difference 0; Ratio Envelopes 0.
+- V3: expected outputs regenerated from the final workbook; export diff silent.
+- V4: paper v1.0.0 (final .docx): every compared cell agrees (0 differ).
+- V6: passes with zero undeclared constants.
 
 ### 3.2 Independent reproduction
 

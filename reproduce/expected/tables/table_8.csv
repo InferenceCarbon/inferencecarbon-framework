@@ -1,4 +1,4 @@
-Table 8 — uncertainty bounds (links to C_Low / C_High and Table 7). Columns H-J: market-based bounds under the procurement-lag crediting scenario (Section 4.8).,,,,,,,,,
+"Table 8 — uncertainty bounds (links to C_Low / C_High and Table 7). Columns H-J: market-based bounds under the procurement-lag crediting scenario (Section 4.8). LB=Location-Based, MB=Market-Based.",,,,,,,,,
 Model,LB Low,LB Central,LB High,MB Low,MB Central,MB High,MB-lag Low,MB-lag Central,MB-lag High
 gpt-4o-mini,0.25219,0.712884,1.018844,0.036864,0.104206,0.14893,0.113521,0.320899,0.458624
 gpt-5 (non-reasoning),0.527152,2.745939,5.652484,0.077057,0.401389,0.826255,0.237293,1.236061,2.544418

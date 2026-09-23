@@ -1,4 +1,4 @@
-"Table 7 — Conversion to location-based and market-based gCO2e/1,000 tokens.",,,,,,
+"Table 7 — Conversion to location-based and market-based gCO2e/1,000 tokens. LB=Location-Based, MB=Market-Based.",,,,,,
 Model,"Adjusted Per-Model Wh/1,000 tokens",LB gCO2e/Wh,MB gCO2e/Wh,"Location-Based gCO2e/1,000 tokens","Market-Based gCO2e/1,000 tokens","Market-Based (procurement-lag) gCO2e/1,000 tokens"
 gpt-4o-mini,2.0195,0.353,0.0516,0.712884,0.104206,0.320899
 gpt-5 (non-reasoning),7.778863,0.353,0.0516,2.745939,0.401389,1.236061

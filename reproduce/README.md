@@ -4,7 +4,7 @@ Three scripts, one chain. None needs an API key.
 
 | Script | From | To | Runtime |
 |---|---|---|---|
-| `corpus_summary.py` | frozen corpus zip (checksum verified on load) | the workbook's Corpus, Table B1, Bootstrap, RatioEnvelopes and Table 1 input cells: as CSV (`--out`), as a read-only agreement report against a workbook (`--workbook`), or written directly into a copy of the workbook (`--write-workbook IN OUT`) | ~10 s |
+| `corpus_summary.py` | frozen corpus zip (checksum verified on load) | the workbook's Corpus, Table B1, Bootstrap, Ratio Envelopes and Table 1 input cells: as CSV (`--out`), as a read-only agreement report against a workbook (`--workbook`), or written directly into a copy of the workbook (`--write-workbook IN OUT`) | ~10 s |
 | `paper_tables.py` | the deposited workbook | every paper table as CSV; optional cell-by-cell check of a paper .docx (`--paper`) | ~5 s |
 | `formula_audit.py` | the deposited workbook | VERIFICATION.md step V6: reports any numeric cell on a calculation sheet that is neither a formula nor a declared input; exit status 1 if any | ~2 s |
 

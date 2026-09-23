@@ -8,7 +8,7 @@ InferenceCarbon framework v1.0.0. Reproduces, from InferenceCarbon_corpus_frozen
                   days, R central / short / long / floor / heavy with n)  — paper Appendix B, D.5.5
   table_b1.csv    Table B1 (daily-median TPS mean, SD, days)
   bootstrap.csv   the Bootstrap sheet (T and R bands, B = 10,000)          — paper Appendix D.6
-  ratios.csv      the RatioEnvelopes bootstrap (5th/95th of within-family ratios) — Table C3
+  ratios.csv      the Ratio Envelopes bootstrap (5th/95th of within-family ratios) — Table C3
 
 Filters (paper Appendix B.4 and D.5.5), stated here so the deposit is self-contained:
   F1  mock records excluded; provider == openai only.
@@ -24,8 +24,8 @@ Filters (paper Appendix B.4 and D.5.5), stated here so the deposit is self-conta
 
 Usage:  python corpus_summary.py --corpus InferenceCarbon_corpus_frozen_20260822.zip --out out/
         add --workbook <xlsx> to diff against the deposited workbook (read-only check);
-        add --write-workbook <in.xlsx> <out.xlsx> to write the Corpus, TableB1, Bootstrap, RatioEnvelopes and
-        T1_GPT55_Grid input cells directly (formulas are preserved; cached values are dropped, so recalculate the
+        add --write-workbook <in.xlsx> <out.xlsx> to write the Corpus, Table B1, Bootstrap, Ratio Envelopes and
+        Table 1 input cells directly (formulas are preserved; cached values are dropped, so recalculate the
         output before use: soffice --headless --convert-to xlsx --outdir recalc/ <out.xlsx>, or open and save in Excel).
 Deterministic: seeds 20260822 (T and R bands) and 20260823 (ratio envelopes); numpy default_rng.
 """
@@ -176,13 +176,13 @@ def compare(wb_path, rows, boot, rat):
             for k, v in zip(['T_low', 'T_high', 'R_low', 'R_high'], wbb[b['label']]):
                 if v is not None: d.append(abs(float(v) - b[k]))
     print(f'Bootstrap sheet: {len(d)} bands compared, max |diff| = {max(d):.4f}, mean = {sum(d)/len(d):.4f}')
-    ws = wb['RatioEnvelopes']; wr = {(ws.cell(r, 2).value, ws.cell(r, 3).value): [ws.cell(r, c).value for c in (10, 12, 13)] for r in range(3, 20) if ws.cell(r, 2).value}
+    ws = wb['Ratio Envelopes']; wr = {(ws.cell(r, 2).value, ws.cell(r, 3).value): [ws.cell(r, c).value for c in (10, 12, 13)] for r in range(3, 20) if ws.cell(r, 2).value}
     d = []
     for x in rat:
         v = wr.get((x['numerator'], x['denominator']))
         if not v: print('  ratio row not in workbook:', x['numerator'], x['denominator']); continue
         if v: d += [abs(float(v[0]) - x['central']), abs(float(v[1]) - x['low']), abs(float(v[2]) - x['high'])]
-    print(f'RatioEnvelopes: {len(d)} values compared, max |diff| = {max(d):.3f}')
+    print(f'Ratio Envelopes: {len(d)} values compared, max |diff| = {max(d):.3f}')
 
 
 def write_workbook(src, dst, rows, boot, rat, R, floor):
@@ -199,7 +199,7 @@ def write_workbook(src, dst, rows, boot, rat, R, floor):
         if r['label'] in rm:
             for j, k in enumerate(keys):
                 if r[k] is not None: ws.cell(rm[r['label']], 3 + j).value = r[k]; n += 1
-    ws = wb['TableB1']; rm = rowmap(ws, 1)
+    ws = wb['Table B1']; rm = rowmap(ws, 1)
     for r in rows:
         if r['label'] in rm:
             for j, k in enumerate(['tps_daily_mean', 'tps_daily_sd', 'days']): ws.cell(rm[r['label']], 2 + j).value = r[k]; n += 1
@@ -209,13 +209,13 @@ def write_workbook(src, dst, rows, boot, rat, R, floor):
             rr = rm[b['label']]
             for c, k in ((3, 'days'), (4, 'T_low'), (5, 'T_high'), (9, 'R_n'), (10, 'R_median'), (11, 'R_low'), (12, 'R_high')):
                 ws.cell(rr, c).value = b[k]; n += 1
-    ws = wb['RatioEnvelopes']
+    ws = wb['Ratio Envelopes']
     rm = {(ws.cell(r, 2).value, ws.cell(r, 3).value): r for r in range(3, 30) if ws.cell(r, 2).value}
     for x in rat:
         k = (x['numerator'], x['denominator'])
         if k in rm:
             ws.cell(rm[k], 10).value = x['central']; ws.cell(rm[k], 12).value = x['low']; ws.cell(rm[k], 13).value = x['high']; n += 3
-    ws = wb['T1_GPT55_Grid']
+    ws = wb['Table 1']
     for r in range(3, ws.max_row + 1):
         e = ws.cell(r, 1).value
         if not isinstance(e, str) or e.lower() not in EFF: continue
@@ -225,7 +225,7 @@ def write_workbook(src, dst, rows, boot, rat, R, floor):
         for j, v in enumerate(vals):
             if v is not None: ws.cell(r, 2 + j).value = v; n += 1
     a_ = wb['Assumptions']
-    a_['A26'] = 'v1.0.0: Corpus, TableB1, Bootstrap, RatioEnvelopes and T1_GPT55_Grid input cells written by corpus_summary.py --write-workbook (seeds 20260822/20260823); no formula changed.'
+    a_['A26'] = 'v1.0.0: Corpus, Table B1, Bootstrap, Ratio Envelopes and Table 1 input cells written by corpus_summary.py --write-workbook (seeds 20260822/20260823); no formula changed.'
     wb.save(dst)
     print('wrote', n, 'input cells to', dst, '- recalculate before use')
 
