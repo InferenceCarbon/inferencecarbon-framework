@@ -1,4 +1,4 @@
-"Appendix C — staged high-range calculation (formulas). T and R bands are bootstrap percentile factors from the Bootstrap sheet (v1.0.0); A, PQPC and P are declared bounds (Assumptions).",,,,,,,,,,,
+"Appendix C — staged high-range calculation (formulas). T and R bands are bootstrap percentile factors from the Bootstrap sheet (v1.0.0); A, PQPC and P are declared bounds (Assumptions). LB=Location-Based, MB=Market-Based.",,,,,,,,,,,
 Model,Adjusted Wh,TPS Mean,TPS SD,Reasoning Mode,Fixed_high,TPS_high,R_high,Compounded,Wh_high,"LB gCO2e/1,000 tokens","MB gCO2e/1,000 tokens"
 gpt-4o-mini,2.0195,80.1,23.9,None,1.236,1.1563,1,1.429187,2.886243,1.018844,0.14893
 gpt-5 (non-reasoning),7.778863,61.4,13.3,None,1.82928,1.1253,1,2.058489,16.012702,5.652484,0.826255
