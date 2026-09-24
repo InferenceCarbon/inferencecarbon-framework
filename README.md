@@ -94,11 +94,12 @@ subsetted and built upon.
   figures derived from the tables, including by commercial auditors, is
   expressly permitted. Commercial use requires a licence
   (info@inferencecarbon.ai).
-- **Frozen raw measurement corpus** — [CC BY-NC 4.0](LICENSE-DATA), with an
-  express permission: use of the corpus to verify or assure figures derived
-  from it, including by commercial auditors and assurance providers, is
-  permitted and welcomed. What the non-commercial term withholds is the
-  assembly of deposited corpora into a commercial data product.
+- **Frozen raw measurement corpus** — [CC BY-NC 4.0](LICENSE-DATA), with the
+  same express permissions: regulators, standards bodies and public
+  authorities, and verification or assurance of figures derived from it,
+  including by commercial auditors. What the non-commercial term withholds is
+  the assembly of deposited corpora into a commercial data product; commercial
+  use requires a licence.
 - No trademark rights are granted. The paper text is licensed separately
   (CC BY-NC-ND 4.0 in its preprint versions). Paper Section 8.2 and
   Appendix H.1 are canonical.

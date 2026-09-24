@@ -65,5 +65,5 @@ the workbook, and the discrepancy is logged in VERIFICATION.md §4 until the nex
 
 | Release class | Deposited on Zenodo | Licenses |
 |---|---|---|
-| Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions; raw corpus: CC BY-NC 4.0 with the verification and assurance permission (see LICENSE, LICENSE-DATA) |
+| Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions; raw corpus: CC BY-NC 4.0 with the same express permissions (see LICENSE, LICENSE-DATA) |
 | Minor (vX.Y) | Repository snapshot and the summary workbooks the release's changed tables consume | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions (see LICENSE, LICENSE-DATA) |

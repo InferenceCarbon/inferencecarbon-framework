@@ -43,13 +43,16 @@ paper ever disagree, the paper wins and this file has a bug.
    the paper. Non-commercial use — recomputation, subsetting, scholarship —
    requires no permission from us.
 
-   Express permission: use of the raw corpus to verify or assure figures
-   derived from it, including verification by commercial auditors and
-   assurance providers, is permitted and welcomed —
-   methodology@inferencecarbon.ai.
+   Express permissions on top of the license, so that no one has to ask:
+   - use by regulators, standards bodies and public authorities in their
+     official functions;
+   - use of the raw corpus to verify or assure figures derived from it,
+     including verification by commercial auditors and assurance providers
+     — permitted and welcomed, methodology@inferencecarbon.ai.
 
    What the non-commercial term withholds is the assembly of deposited
-   corpora into a commercial data product.
+   corpora into a commercial data product; commercial use requires a license
+   from InferenceCarbon Ltd (info@inferencecarbon.ai).
 
    Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 
@@ -57,8 +60,8 @@ Scope notes
 
 - The same class licenses apply at every release class of the series:
   CC BY-NC 4.0 (with the express permissions above) for the summary workbooks
-  and parameter tables, CC BY-NC 4.0 (with the verification permission) for
-  the raw corpus (deposited at major versions only). See VERSIONING.md.
+  and parameter tables and for the raw corpus (deposited at major versions
+  only). See VERSIONING.md.
 - The live measurement series is served through the InferenceCarbon.ai API,
   whose terms of service are the operative license for that service.
   InferenceCarbon Ltd asserts copyright, database rights and all other
