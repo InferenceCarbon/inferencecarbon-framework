@@ -87,18 +87,21 @@ subsetted and built upon.
 
 - **Code** — [Apache 2.0](LICENSE): the same openness as MIT with an
   explicit patent grant and no implied trademark rights.
-- **Summary workbooks and parameter tables** — [CC BY 4.0](LICENSE-DATA):
-  these exist to be recomputed, subsetted and built upon; attribution is the
-  only condition.
+- **Summary workbooks and parameter tables** — [CC BY-NC 4.0](LICENSE-DATA),
+  with express permissions: non-commercial use (recomputation, subsetting,
+  teaching, research, publication) needs no permission; use by regulators,
+  standards bodies and public authorities, and verification or assurance of
+  figures derived from the tables, including by commercial auditors, is
+  expressly permitted. Commercial use requires a licence
+  (info@inferencecarbon.ai).
 - **Frozen raw measurement corpus** — [CC BY-NC 4.0](LICENSE-DATA), with an
   express permission: use of the corpus to verify or assure figures derived
   from it, including by commercial auditors and assurance providers, is
   permitted and welcomed. What the non-commercial term withholds is the
   assembly of deposited corpora into a commercial data product.
-- The licenses govern the compiled datasets, not the individual measured
-  facts, which may be used freely. No trademark rights are granted. The paper
-  text is licensed separately (CC BY-NC-ND 4.0 in its preprint versions).
-  Paper Section 8.2 and Appendix H.1 are canonical.
+- No trademark rights are granted. The paper text is licensed separately
+  (CC BY-NC-ND 4.0 in its preprint versions). Paper Section 8.2 and
+  Appendix H.1 are canonical.
 
 The live operational stack (multi-vantage scheduling, model manifests and
 quality-assurance layers) and the live measurement database served through

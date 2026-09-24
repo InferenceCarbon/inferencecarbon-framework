@@ -1,25 +1,37 @@
 Data licenses — InferenceCarbon framework
 
 Copyright (c) 2026 InferenceCarbon Ltd. The data artifacts in this repository
-carry two licenses, split by class, as set out in the framework paper
+carry non-commercial licenses, split by class with express permissions, as set out in the framework paper
 (Section 8.2 and Appendix H.1). The paper is canonical; if this file and the
 paper ever disagree, the paper wins and this file has a bug.
 
-1. Summary workbooks and parameter tables — CC BY 4.0
+1. Summary workbooks and parameter tables — CC BY-NC 4.0, with express permissions
 
-   Creative Commons Attribution 4.0 International.
+   Creative Commons Attribution-NonCommercial 4.0 International.
    Applies to: data/workbooks/, parameters/, and the other derived summary
    artifacts in this repository (manifests/, calibration/ outputs,
    data/manifest.csv and the checksum file, reproduce/expected/ and
    reproduce/declared_inputs.json).
 
-   These exist to be recomputed, subsetted and built upon. You are free to
-   share and adapt them for any purpose, including commercially; attribution
-   is the only condition. Give appropriate credit, provide a link to the
-   license, and indicate if changes were made. Please cite the version DOI of
-   the release you used (see README.md, "How to cite").
+   These exist to be checked, recomputed and built upon in scholarship and in
+   public policy. Non-commercial use — recomputation, subsetting, teaching,
+   research and publication — requires no permission; attribution is the
+   condition. Please cite the version DOI of the release you used (see
+   README.md, "How to cite").
 
-   Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+   Express permissions on top of the license, so that no one has to ask:
+   - use by regulators, standards bodies and public authorities in their
+     official functions, including reproduction in guidance and standards;
+   - use to verify or assure figures derived from these tables, including
+     verification by commercial auditors and assurance providers.
+
+   Commercial use — incorporation into a product, service, dataset or
+   report supplied to third parties, or use in a business's own carbon
+   accounting — requires a commercial license from InferenceCarbon Ltd:
+   info@inferencecarbon.ai. The InferenceCarbon.ai API serves the current,
+   continuously maintained figures under its own terms.
+
+   Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 
 2. Frozen raw measurement corpus — CC BY-NC 4.0, with an express permission
 
@@ -43,11 +55,10 @@ paper ever disagree, the paper wins and this file has a bug.
 
 Scope notes
 
-- The same class licenses apply at every release class of the series: CC BY
-  4.0 for the summary workbooks and parameter tables, CC BY-NC 4.0 for the raw
-  corpus (deposited at major versions only). See VERSIONING.md.
-- The licenses govern the compiled datasets. Individual measured facts are
-  not themselves protected by copyright.
+- The same class licenses apply at every release class of the series:
+  CC BY-NC 4.0 (with the express permissions above) for the summary workbooks
+  and parameter tables, CC BY-NC 4.0 (with the verification permission) for
+  the raw corpus (deposited at major versions only). See VERSIONING.md.
 - The live measurement series is served through the InferenceCarbon.ai API,
   whose terms of service are the operative license for that service.
   InferenceCarbon Ltd asserts copyright, database rights and all other

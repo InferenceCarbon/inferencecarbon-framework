@@ -20,9 +20,9 @@ InferenceCarbon.ai API rather than deposited. The full corpus and summary
 workbooks are deposited at major versions only; minor releases deposit only
 the workbooks their changed tables consume. Deposited artifacts carry the
 class licenses of paper Section 8.2 and Appendix H.1 whatever the release
-class: Apache 2.0 for software, CC BY 4.0 for the summary workbooks and
-parameter tables, and CC BY-NC 4.0 (with an express permission for
-verification and assurance use) for the raw corpus.
+class: Apache 2.0 for software, and CC BY-NC 4.0 for the summary workbooks,
+parameter tables and raw corpus, each with the express permissions stated in
+LICENSE-DATA (regulatory and standards use; verification and assurance use).
 
 ## Version numbers
 
@@ -65,5 +65,5 @@ the workbook, and the discrepancy is logged in VERIFICATION.md §4 until the nex
 
 | Release class | Deposited on Zenodo | Licenses |
 |---|---|---|
-| Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY 4.0; raw corpus: CC BY-NC 4.0 with the verification and assurance permission (see LICENSE, LICENSE-DATA) |
-| Minor (vX.Y) | Repository snapshot and the summary workbooks the release's changed tables consume | Software: Apache 2.0; summary workbooks and parameter tables: CC BY 4.0 (see LICENSE, LICENSE-DATA) |
+| Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions; raw corpus: CC BY-NC 4.0 with the verification and assurance permission (see LICENSE, LICENSE-DATA) |
+| Minor (vX.Y) | Repository snapshot and the summary workbooks the release's changed tables consume | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions (see LICENSE, LICENSE-DATA) |
