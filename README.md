@@ -16,7 +16,7 @@ scripts that reproduce the paper's tables.
 
 ## Current version
 
-**v1.0.0** — version DOI 10.5281/zenodo.TODO — see [CHANGELOG.md](CHANGELOG.md).
+**v1.0.0** — version DOI [10.5281/zenodo.22962476](https://doi.org/10.5281/zenodo.22962476) — see [CHANGELOG.md](CHANGELOG.md).
 Cite the version DOI to fix a specific calculation.
 
 ## Repository map
