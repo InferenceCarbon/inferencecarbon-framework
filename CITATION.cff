@@ -1,7 +1,7 @@
 # GitHub renders this as a "Cite this repository" button.
-# The Zenodo concept DOI and the arXiv identifier are added in the commit
-# that follows the first release (see CHANGELOG.md); the tagged v1.0.0
-# snapshot predates them by design.
+# The Zenodo DOIs were added in the commit following the first release; the
+# arXiv identifier is added when the paper is announced (see CHANGELOG.md).
+# The tagged v1.0.0 snapshot predates both by design.
 cff-version: 1.2.0
 message: >-
   If you use this framework, please cite it. Cite the version DOI to fix a
@@ -18,6 +18,13 @@ authors:
     orcid: "https://orcid.org/0009-0003-6822-8300"
     affiliation: "InferenceCarbon Ltd"
 license: Apache-2.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22962475
+    description: "Concept DOI: resolves to the latest version of the framework"
+  - type: doi
+    value: 10.5281/zenodo.22962476
+    description: "Version DOI: the v1.0.0 deposit behind the paper's tables"
 repository-code: "https://github.com/InferenceCarbon/inferencecarbon-framework"
 preferred-citation:
   type: article

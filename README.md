@@ -8,9 +8,11 @@ Large Language Model Inference Under Limited Disclosure, Using the Worked
 Example of OpenAI's GPT-5 Model Family* (Manktelow, 2026): the collection engine, the parameter tables, and the
 scripts that reproduce the paper's tables.
 
-- Paper: arXiv identifier to follow on submission (see CHANGELOG.md)
-- Archive: concept DOI 10.5281/zenodo.TODO (always resolves to the latest
-  version)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22962475.svg)](https://doi.org/10.5281/zenodo.22962475)
+
+- Paper: submitted to arXiv on 25 September 2026; identifier to follow (see CHANGELOG.md)
+- Archive: concept DOI [10.5281/zenodo.22962475](https://doi.org/10.5281/zenodo.22962475) (always resolves to the
+  latest version); this release, v1.0.0: version DOI [10.5281/zenodo.22962476](https://doi.org/10.5281/zenodo.22962476)
 
 ## Current version
 

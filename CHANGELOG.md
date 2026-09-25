@@ -6,11 +6,18 @@ archived on Zenodo with its own version DOI.
 
 ## [Unreleased]
 
-## [1.0.0] — 2026-09 (date and DOI filled on release)
+## [1.0.0] — 2026-09-25
 
 First public release, accompanying the framework paper.
 
-Paper identifiers: arXiv:TODO · version DOI 10.5281/zenodo.TODO · concept DOI 10.5281/zenodo.TODO.
+Identifiers: version DOI [10.5281/zenodo.22962476](https://doi.org/10.5281/zenodo.22962476) (this deposit) · concept DOI
+[10.5281/zenodo.22962475](https://doi.org/10.5281/zenodo.22962475) (all versions) · arXiv: submitted 25 September 2026,
+identifier recorded here when announced.
+
+Note on the tagged snapshot: the v1.0.0 tag and the Zenodo deposit were created
+before these identifiers existed, so CITATION.cff and README.md inside the tagged
+tree carry none; the identifiers were added on main in the commit following the
+release. The deposited files are otherwise identical to the tag.
 
 ### Deposit
 - `data/InferenceCarbon_corpus_frozen_20260822.zip` — the frozen per-request measurement corpus
