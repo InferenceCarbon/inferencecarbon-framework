@@ -1,0 +1,36 @@
+{
+  "provider": "anthropic",
+  "models": {
+    "claude-fable-5": {
+      "k": 1.63666,
+      "intercept": 9.8
+    },
+    "claude-sonnet-5": {
+      "k": 1.63666,
+      "intercept": 9.8
+    },
+    "claude-opus-4-8": {
+      "k": 1.63666,
+      "intercept": 9.8
+    },
+    "claude-opus-4-7": {
+      "k": 1.63666,
+      "intercept": 14.8
+    },
+    "claude-opus-4-6": {
+      "k": 1.05612,
+      "intercept": 9.03
+    },
+    "claude-sonnet-4-6": {
+      "k": 1.05612,
+      "intercept": 9.03
+    },
+    "claude-haiku-4-5-20251001": {
+      "k": 1.05612,
+      "intercept": 9.03
+    }
+  },
+  "k": 1.63666,
+  "generated": "2026-07-23T15:52:08",
+  "note": "PER-MODEL calibration (2026-07-23c): Anthropic runs two tokenizer generations (fable-5/sonnet-5/opus-4-8/opus-4-7 at k~1.64; opus-4-6/sonnet-4-6/haiku-4.5 at k~1.06), so a single family k mis-estimates hidden tokens for one generation or the other. native ~= k*o200k + intercept on benign English prose; hidden-token estimate = native_completion - k*o200k_visible. Top-level k = family median, fallback only."
+}

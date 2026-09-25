@@ -1,0 +1,154 @@
+{
+  "_comment": "Counts and dates are from the frozen 22 Aug 2026 corpus (14,733 request records; variant_dates compiled from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
+  "provider": "google",
+  "campaign_window": {
+    "start": "2026-06-25",
+    "compiled": "2026-08-22"
+  },
+  "models": [
+    {
+      "model_id": "gemini-2.5-flash",
+      "family": "Gemini 2.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-07-09",
+      "retired": null,
+      "first_measured": "2026-07-09",
+      "last_measured": "2026-08-22",
+      "n_requests": 473,
+      "n_failed": 1,
+      "notes": "One transient 404 on 2026-07-09 (Google-side flap); recovered and measured through end of window."
+    },
+    {
+      "model_id": "gemini-2.5-flash-lite",
+      "family": "Gemini 2.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 162,
+      "n_failed": 1,
+      "notes": "One transient 404 on 2026-07-09 (Google-side flap); recovered and measured through end of window."
+    },
+    {
+      "model_id": "gemini-3-flash-preview",
+      "family": "Gemini 3",
+      "effort_settings": [
+        "default",
+        "high",
+        "low"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 375,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gemini-3-pro-preview",
+      "family": "Gemini 3",
+      "effort_settings": [
+        "default"
+      ],
+      "added": null,
+      "retired": "2026-06-01",
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-07",
+      "n_requests": 118,
+      "n_failed": 118,
+      "notes": "In the tracked set from campaign start but already retired from the Google API (1 June 2026, pre-campaign): comparison tracker speed N/A from 2026-05-30; all 118 owned-benchmark requests (2026-06-25 to 2026-08-07) returned 404 'no longer available', so the Gemini anchor model never yielded an owned sample. first/last_measured record attempt dates."
+    },
+    {
+      "model_id": "gemini-3.1-flash-lite-preview",
+      "family": "Gemini 3.1",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 162,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gemini-3.1-pro-preview",
+      "family": "Gemini 3.1",
+      "effort_settings": [
+        "default",
+        "high",
+        "low"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 369,
+      "n_failed": 2,
+      "notes": ""
+    },
+    {
+      "model_id": "gemini-3.5-flash",
+      "family": "Gemini 3.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 163,
+      "n_failed": 1,
+      "notes": ""
+    },
+    {
+      "model_id": "gemini-3.5-flash-lite",
+      "family": "Gemini 3.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-07-22",
+      "retired": null,
+      "first_measured": "2026-07-22",
+      "last_measured": "2026-08-22",
+      "n_requests": 112,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gemini-3.6-flash",
+      "family": "Gemini 3.6",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-07-22",
+      "retired": null,
+      "first_measured": "2026-07-22",
+      "last_measured": "2026-08-22",
+      "n_requests": 110,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "gemma-4-31b-it",
+      "family": "Gemma",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 234,
+      "n_failed": 12,
+      "notes": ""
+    }
+  ]
+}

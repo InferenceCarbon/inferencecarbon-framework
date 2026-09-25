@@ -1,0 +1,80 @@
+Data licenses — InferenceCarbon framework
+
+Copyright (c) 2026 InferenceCarbon Ltd. The data artifacts in this repository
+carry non-commercial licenses, split by class with express permissions, as set out in the framework paper
+(Section 8.2 and Appendix H.1). The paper is canonical; if this file and the
+paper ever disagree, the paper wins and this file has a bug.
+
+1. Summary workbooks and parameter tables — CC BY-NC 4.0, with express permissions
+
+   Creative Commons Attribution-NonCommercial 4.0 International.
+   Applies to: data/workbooks/, parameters/, and the other derived summary
+   artifacts in this repository (manifests/, calibration/ outputs,
+   data/manifest.csv and the checksum file, reproduce/expected/ and
+   reproduce/declared_inputs.json).
+
+   These exist to be checked, recomputed and built upon in scholarship and in
+   public policy. Non-commercial use — recomputation, subsetting, teaching,
+   research and publication — requires no permission; attribution is the
+   condition. Please cite the version DOI of the release you used (see
+   README.md, "How to cite").
+
+   Express permissions on top of the license, so that no one has to ask:
+   - use by regulators, standards bodies and public authorities in their
+     official functions, including reproduction in guidance and standards;
+   - use to verify or assure figures derived from these tables, including
+     verification by commercial auditors and assurance providers.
+
+   Commercial use — incorporation into a product, service, dataset or
+   report supplied to third parties, or use in a business's own carbon
+   accounting — requires a commercial license from InferenceCarbon Ltd:
+   info@inferencecarbon.ai. The InferenceCarbon.ai API serves the current,
+   continuously maintained figures under its own terms.
+
+   Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+2. Frozen raw measurement corpus — CC BY-NC 4.0, with an express permission
+
+   Creative Commons Attribution-NonCommercial 4.0 International.
+   Applies to: data/InferenceCarbon_corpus_frozen_20260822.zip (SHA-256 in
+   data/manifest.csv) and its mirror in the Zenodo deposit.
+
+   The corpus is deposited in full so that anyone can check every number in
+   the paper. Non-commercial use — recomputation, subsetting, scholarship —
+   requires no permission from us.
+
+   Express permissions on top of the license, so that no one has to ask:
+   - use by regulators, standards bodies and public authorities in their
+     official functions;
+   - use of the raw corpus to verify or assure figures derived from it,
+     including verification by commercial auditors and assurance providers
+     — permitted and welcomed, methodology@inferencecarbon.ai.
+
+   What the non-commercial term withholds is the assembly of deposited
+   corpora into a commercial data product; commercial use requires a license
+   from InferenceCarbon Ltd (info@inferencecarbon.ai).
+
+   Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+Scope notes
+
+- The same class licenses apply at every release class of the series:
+  CC BY-NC 4.0 (with the express permissions above) for the summary workbooks
+  and parameter tables and for the raw corpus (deposited at major versions
+  only). See VERSIONING.md.
+- The live measurement series is served through the InferenceCarbon.ai API,
+  whose terms of service are the operative license for that service.
+  InferenceCarbon Ltd asserts copyright, database rights and all other
+  applicable intellectual property rights in the continuously maintained
+  operational database, including the selection, verification, arrangement,
+  updating, enrichment and presentation of the data. Access to live services
+  is governed by separate contractual terms.
+- These licenses cover InferenceCarbon Ltd's own artifacts only. Third-party
+  datasets cited by the paper are not reproduced here or in the Zenodo
+  deposit, and carry their own licenses; obtain them from their publishers.
+- The paper text is licensed separately (CC BY-NC-ND 4.0 in its preprint
+  versions) and is not part of this repository.
+- Software is licensed under Apache 2.0 (LICENSE, NOTICE).
+- No trademark rights are granted under any of these licenses.
+  "InferenceCarbon", the InferenceCarbon name and logo, and the
+  InferenceCarbon.ai domain are marks of InferenceCarbon Ltd, and are reserved.

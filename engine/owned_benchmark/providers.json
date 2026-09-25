@@ -1,0 +1,150 @@
+{
+  "_comment": "Multi-provider config for the owned throughput benchmark. Every provider here exposes an OpenAI-COMPATIBLE /v1/chat/completions streaming endpoint, so one engine (the OpenAI Python SDK pointed at each base_url) serves them all. Per provider: base_url (null = OpenAI default), key_file (plain-text API key on the Desktop working folder), seed_families (substrings that identify the frontier chat models to track at discovery), exclude (substrings to skip), efforts (reasoning tiers to break out; [] = one default variant per model, pending calibration), and output filenames. OpenAI keeps its existing curated tracked_models.json + filenames untouched.",
+  "providers": {
+    "openai": {
+      "base_url": null,
+      "models_url": "https://api.openai.com/v1/models",
+      "key_file": "OpenAIAPIKey.txt",
+      "tracked_file": "tracked_models.json",
+      "manifest_file": "manifest.json",
+      "spend_file": "spend_state.json",
+      "engine_workbook": "InferenceCarbon_TokenSec_Daily_OpenAI_Owned.xlsx",
+      "daily_workbook": "InferenceCarbon_TokenSec_Daily_Owned.xlsx",
+      "discovery": "curated",
+      "effort_style": "openai",
+      "default_thinking": false,
+      "note": "Curated via tracked_models.json; efforts and exclude live there.",
+      "budget_cap": 700,
+      "budget_cap_note": "Cumulative caps. openai 600->700 on 2026-07-30 (fourth revision): second fixed reference task ('reason-heavy', k=36) added at the 1k workload to measure task-demand sensitivity on clean bases. James monitors daily burn; credit limits raised."
+    },
+    "anthropic": {
+      "base_url": "https://api.anthropic.com/v1/",
+      "models_url": "https://api.anthropic.com/v1/models",
+      "key_file": "AnthropicAPIKey.txt",
+      "tracked_file": "tracked_models_anthropic.json",
+      "manifest_file": "manifest_anthropic.json",
+      "spend_file": "spend_state_anthropic.json",
+      "engine_workbook": "InferenceCarbon_Engine_Anthropic_Owned.xlsx",
+      "daily_workbook": "InferenceCarbon_TokenSec_Daily_Anthropic_Owned.xlsx",
+      "discovery": "families",
+      "auth": "x-api-key",
+      "anthropic_version": "2023-06-01",
+      "default_headers": {
+        "anthropic-version": "2023-06-01"
+      },
+      "seed_families": [
+        "claude-opus-4",
+        "claude-sonnet-4",
+        "claude-haiku-4",
+        "claude-fable"
+      ],
+      "exclude": [],
+      "efforts": [],
+      "effort_style": "anthropic-thinking",
+      "default_thinking": true,
+      "thinking_budgets": {
+        "low": 2048,
+        "medium": 8192,
+        "high": 16384,
+        "xhigh": 32768
+      },
+      "note": "Anthropic OpenAI-compat endpoint. default_thinking=true: Claude 4.6+ thinks adaptively by default, so all variants get reasoning headroom (2026-07-23). Effort ladder via extra_body thinking budgets ('minimal' = thinking off = the R=1 baseline); VERIFY WITH `probe` before enabling efforts in the tracked file \u2014 the compat layer's acceptance of the thinking param is unconfirmed.",
+      "budget_cap": 130,
+      "budget_cap_note": "Cap set to 130 on 2026-07-27 (was 175): current spend + ~30 days at observed burn. Single cap \u2014 matches the scheduled task's --budget. Revisit ~2026-08-27."
+    },
+    "google": {
+      "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+      "models_url": "https://generativelanguage.googleapis.com/v1beta/openai/models",
+      "key_file": "GeminiAPIKey.txt",
+      "tracked_file": "tracked_models_google.json",
+      "manifest_file": "manifest_google.json",
+      "spend_file": "spend_state_google.json",
+      "engine_workbook": "InferenceCarbon_Engine_Google_Owned.xlsx",
+      "daily_workbook": "InferenceCarbon_TokenSec_Daily_Gemini_Owned.xlsx",
+      "discovery": "families",
+      "seed_families": [
+        "gemini-",
+        "gemma-"
+      ],
+      "exclude": [
+        "embedding",
+        "aqa",
+        "imagen",
+        "vision",
+        "tts",
+        "image",
+        "live",
+        "native-audio",
+        "robotics",
+        "-er-",
+        "learnlm",
+        "veo"
+      ],
+      "efforts": [],
+      "effort_style": "openai",
+      "default_thinking": true,
+      "note": "Gemini OpenAI-compat layer. default_thinking=true: 2.5/3.x think adaptively by default, so all variants get reasoning headroom (2026-07-23 \u2014 the missing headroom truncated gemini-3.5/3.6-flash answers). thoughtsTokenCount is harvested from usage where the compat layer exposes it, else derived from total-minus-parts. Effort breakout via reasoning_effort; VERIFY WITH `probe` before enabling efforts in the tracked file.",
+      "budget_cap": 200,
+      "budget_cap_note": "Cap set to 200 on 2026-07-27 (was 250): current spend + ~30 days at observed burn. Single cap \u2014 matches the scheduled task's --budget. Revisit ~2026-08-27."
+    },
+    "mistral": {
+      "base_url": "https://api.mistral.ai/v1",
+      "models_url": "https://api.mistral.ai/v1/models",
+      "key_file": "MistralDesktopKey.txt",
+      "tracked_file": "tracked_models_mistral.json",
+      "manifest_file": "manifest_mistral.json",
+      "spend_file": "spend_state_mistral.json",
+      "engine_workbook": "InferenceCarbon_Engine_Mistral_Owned.xlsx",
+      "daily_workbook": "InferenceCarbon_TokenSec_Daily_Mistral_Owned.xlsx",
+      "discovery": "families",
+      "seed_families": [
+        "mistral-large",
+        "mistral-medium",
+        "mistral-small",
+        "magistral",
+        "ministral"
+      ],
+      "exclude": [
+        "embed",
+        "ocr",
+        "moderation",
+        "codestral",
+        "pixtral",
+        "saba"
+      ],
+      "efforts": [],
+      "effort_style": "none",
+      "default_thinking": false,
+      "thinking_families": [
+        "magistral"
+      ],
+      "note": "Mistral OpenAI-compat endpoint. Magistral = reasoning family (thinking_families grants it headroom); reasoning streamed in-band as think tags is now split out of the visible series by the recorder (2026-07-23 \u2014 root cause of the magistral-small divergence). No effort dial.",
+      "budget_cap": 130,
+      "budget_cap_note": "Cap set to 130 on 2026-07-27 (was 175): current spend + ~30 days at observed burn. Single cap \u2014 matches the scheduled task's --budget. Revisit ~2026-08-27."
+    },
+    "deepseek": {
+      "base_url": "https://api.deepseek.com",
+      "models_url": "https://api.deepseek.com/models",
+      "key_file": "DeepSeekAPIKey.txt",
+      "tracked_file": "tracked_models_deepseek.json",
+      "manifest_file": "manifest_deepseek.json",
+      "spend_file": "spend_state_deepseek.json",
+      "engine_workbook": "InferenceCarbon_Engine_DeepSeek_Owned.xlsx",
+      "daily_workbook": "InferenceCarbon_TokenSec_Daily_DeepSeek_Owned.xlsx",
+      "discovery": "families",
+      "seed_families": [
+        "deepseek-chat",
+        "deepseek-reasoner",
+        "deepseek-v",
+        "deepseek-r"
+      ],
+      "exclude": [],
+      "efforts": [],
+      "effort_style": "openai",
+      "default_thinking": true,
+      "note": "DeepSeek OpenAI-compat endpoint. default_thinking=true: the campaign showed the 'minimal' variants STILL emit reasoning tokens (v4-pro minimal: ~687), so all variants get headroom and minimal is NOT a clean R=1 baseline. deepseek-chat added to the tracked file as the candidate true baseline; verify its reasoning_tokens are ~0 via `probe` before relying on it.",
+      "budget_cap": 110,
+      "budget_cap_note": "Raised 90->110 on 2026-08-16: at $74 with six collection days to the 22 Aug close, the daily click (~$2.7/day incl. the new 10k and heavy-rung passes) would have hit the 90 cap around the 20th."
+    }
+  }
+}

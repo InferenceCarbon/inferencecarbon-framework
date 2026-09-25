@@ -1,0 +1,21 @@
+# gitleaks configuration for the InferenceCarbon framework repository.
+#
+# Default ruleset, plus one allowlist. The tracked-model manifests key their
+# entries on "api_model", and gitleaks' generic-api-key heuristic reads any
+# long alphanumeric value next to a key containing "api" as a candidate
+# secret. The values are provider model identifiers - claude-haiku-4-5-20251001,
+# mistral-medium-3.5 and the like - which are public names, not credentials,
+# and the files cannot function without them.
+#
+# Nothing else is suppressed: a real credential anywhere in this repository
+# will still be reported.
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Provider model identifiers in the tracked-model manifests"
+paths = [
+  '''engine/owned_benchmark/tracked_models.*\.json''',
+  '''manifests/.*\.json''',
+]

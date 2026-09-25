@@ -1,0 +1,28 @@
+# GitHub renders this as a "Cite this repository" button.
+# The Zenodo concept DOI and the arXiv identifier are added in the commit
+# that follows the first release (see CHANGELOG.md); the tagged v1.0.0
+# snapshot predates them by design.
+cff-version: 1.2.0
+message: >-
+  If you use this framework, please cite it. Cite the version DOI to fix a
+  specific calculation, the concept DOI for the framework as a whole, and the
+  arXiv identifier for the text. A headline figure should always travel with
+  its plausibility band and its confidence label.
+title: "InferenceCarbon framework: \"So, What's the Carbon Cost of Using AI?\" A Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of Large Language Model Inference Under Limited Disclosure, Using the Worked Example of OpenAI's GPT-5 Model Family"
+type: software
+version: 1.0.0
+date-released: 2026-09-25
+authors:
+  - family-names: Manktelow
+    given-names: James
+    orcid: "https://orcid.org/0009-0003-6822-8300"
+    affiliation: "InferenceCarbon Ltd"
+license: Apache-2.0
+repository-code: "https://github.com/InferenceCarbon/inferencecarbon-framework"
+preferred-citation:
+  type: article
+  title: "\"So, What's the Carbon Cost of Using AI?\" A Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of Large Language Model Inference Under Limited Disclosure, Using the Worked Example of OpenAI's GPT-5 Model Family"
+  authors:
+    - family-names: Manktelow
+      given-names: James
+  year: 2026

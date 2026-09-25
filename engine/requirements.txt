@@ -1,0 +1,12 @@
+# InferenceCarbon owned benchmark — runtime dependencies.
+# Tested with Python 3.11. Install with:  pip install -r requirements.txt
+#
+# Lower bounds, not exact pins: the benchmark uses stable, long-standing APIs of
+# each package (OpenAI-compatible streaming client, o200k_base tokenizer,
+# workbook writer), so newer patch/minor releases are expected to work. If you
+# need bit-exact reproduction of the frozen corpus, the versions used to collect
+# it are recorded in the paper's data-availability statement.
+
+openai>=1.40           # OpenAI-compatible streaming client (points at each provider base_url)
+tiktoken>=0.7          # o200k_base tokenizer for cross-provider token normalization
+openpyxl>=3.1          # engine + daily workbook output

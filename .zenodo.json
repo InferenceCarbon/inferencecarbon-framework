@@ -1,0 +1,22 @@
+{
+  "title": "InferenceCarbon framework: \"So, What's the Carbon Cost of Using AI?\" A Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of Large Language Model Inference Under Limited Disclosure, Using the Worked Example of OpenAI's GPT-5 Model Family",
+  "description": "<p>Repository accompanying the InferenceCarbon framework paper: the collection engine, tracked-model manifests, tokenizer calibration runs, parameter tables (with per-row sources), the frozen per-request measurement corpus (data/InferenceCarbon_corpus_frozen_20260822.zip, SHA-256 in data/manifest.csv), the deposited calculation workbooks, and the scripts that reproduce the paper's tables from the frozen corpus and the workbook (corpus_summary.py, paper_tables.py, formula_audit.py), a basis-of-preparation statement with data-quality indicators, and a verification record. Figures produced by this framework are bounded estimates published with Low/Central/High plausibility bands and qualitative confidence labels; the envelopes are part of the finding.</p><p>Licenses by artifact class (paper Section 8.2 and Appendix H.1). Data (summary workbooks, parameter tables and the frozen raw corpus): CC BY-NC 4.0, each with express permissions for use by regulators, standards bodies and public authorities and for verification and assurance (including by commercial auditors); commercial use requires a licence from InferenceCarbon Ltd. Software (the collection and analysis code): Apache 2.0, a more permissive grant carried by the LICENSE file in the repository. The record-level licence shown by Zenodo is the data licence; see LICENSE and LICENSE-DATA.</p>",
+  "creators": [
+    {
+      "name": "Manktelow, James",
+      "affiliation": "InferenceCarbon Ltd",
+      "orcid": "0009-0003-6822-8300"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "carbon accounting",
+    "LLM inference",
+    "energy",
+    "Scope 3",
+    "bounded estimation",
+    "reproducibility"
+  ]
+}

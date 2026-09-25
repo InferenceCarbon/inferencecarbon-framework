@@ -1,0 +1,44 @@
+# Credentials and local configuration — present from the first commit, per the
+# population walkthrough. The engine reads API keys from local key files that
+# must never be committed.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+token.json
+credentials.json
+client_secret*.json
+config.yaml
+secrets/
+*APIKey*.txt
+*Key.txt
+
+# Engine run state and outputs (the corpus belongs to the Zenodo deposit)
+results/
+_runlogs/
+bench_logs/
+spend_state*.json
+deferred_*.json
+*.bak-*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Notebooks and editors
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+
+# Corpus files live in the Zenodo deposit, not in git
+data/corpus/
+*.jsonl.gz
+
+# Reproduction outputs (regenerated; compare against reproduce/expected/)
+reproduce/out/

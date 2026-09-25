@@ -1,0 +1,27 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r reproduce/requirements.txt
+      - name: Corpus checksum
+        run: cd data && shasum -a 256 -c InferenceCarbon_corpus_frozen_20260822.sha256
+      - name: Corpus -> workbook inputs
+        working-directory: reproduce
+        run: |
+          python corpus_summary.py --corpus ../data/InferenceCarbon_corpus_frozen_20260822.zip \
+            --out out/cs --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx
+          diff -r out/cs expected/corpus_summary
+      - name: Workbook -> paper tables
+        working-directory: reproduce
+        run: |
+          python paper_tables.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx --out out/tables
+          diff -r out/tables expected/tables
+      - name: Formula audit (V6)
+        working-directory: reproduce
+        run: python formula_audit.py --workbook ../data/workbooks/OpenAIModelCalculations_v1.0.0.xlsx

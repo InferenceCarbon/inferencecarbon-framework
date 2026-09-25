@@ -1,0 +1,108 @@
+{
+  "_comment": "Counts and dates are from the frozen 22 Aug 2026 corpus (14,733 request records; variant_dates compiled from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
+  "provider": "mistral",
+  "campaign_window": {
+    "start": "2026-06-25",
+    "compiled": "2026-08-22"
+  },
+  "models": [
+    {
+      "model_id": "magistral-medium-latest",
+      "family": "Magistral",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 177,
+      "n_failed": 37,
+      "notes": ""
+    },
+    {
+      "model_id": "magistral-small-latest",
+      "family": "Magistral",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 164,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "ministral-8b-latest",
+      "family": "Ministral",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 161,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "mistral-large-latest",
+      "family": "Mistral Large",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 217,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "mistral-medium-3.5",
+      "family": "Mistral Medium",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 161,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "mistral-medium-latest",
+      "family": "Mistral Medium",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 160,
+      "n_failed": 0,
+      "notes": ""
+    },
+    {
+      "model_id": "mistral-small-latest",
+      "family": "Mistral Small",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 167,
+      "n_failed": 0,
+      "notes": ""
+    }
+  ]
+}

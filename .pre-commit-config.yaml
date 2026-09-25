@@ -1,0 +1,16 @@
+# Install with:  pip install pre-commit && pre-commit install
+# The gitleaks hook blocks a commit containing a detectable secret, so the
+# check runs without anyone remembering to run it.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files
+        args: ["--maxkb=51200"]   # nothing near GitHub's 100 MB limit; corpus goes to Zenodo
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace

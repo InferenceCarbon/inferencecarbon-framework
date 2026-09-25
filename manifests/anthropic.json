@@ -1,0 +1,122 @@
+{
+  "_comment": "Counts and dates are from the frozen 22 Aug 2026 corpus (14,733 request records; variant_dates compiled from results/run_*.json) and the campaign retirement record. 'added' is the first campaign measurement day (campaign start 2026-06-25); 'retired' is an API retirement date, null if the model was still live at compile date. effort_settings lists efforts with at least one successful sample. Edit by hand only with a corresponding note.",
+  "provider": "anthropic",
+  "campaign_window": {
+    "start": "2026-06-25",
+    "compiled": "2026-08-22"
+  },
+  "models": [
+    {
+      "model_id": "claude-fable-5",
+      "family": "Claude Fable 5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-07-09",
+      "retired": null,
+      "first_measured": "2026-07-09",
+      "last_measured": "2026-08-22",
+      "n_requests": 112,
+      "n_failed": 18,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-haiku-4-5-20251001",
+      "family": "Claude Haiku 4.5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 167,
+      "n_failed": 2,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-opus-4-6",
+      "family": "Claude Opus 4.6",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 224,
+      "n_failed": 1,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-opus-4-7",
+      "family": "Claude Opus 4.7",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 171,
+      "n_failed": 2,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-opus-4-8",
+      "family": "Claude Opus 4.8",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 170,
+      "n_failed": 2,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-opus-5",
+      "family": "Claude Opus 5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-08-06",
+      "retired": null,
+      "first_measured": "2026-08-06",
+      "last_measured": "2026-08-22",
+      "n_requests": 70,
+      "n_failed": 0,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-sonnet-4-6",
+      "family": "Claude Sonnet 4.6",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-06-25",
+      "retired": null,
+      "first_measured": "2026-06-25",
+      "last_measured": "2026-08-22",
+      "n_requests": 221,
+      "n_failed": 1,
+      "notes": "Default adaptive thinking (no effort ladder available via the OpenAI-compat layer; see engine notes)."
+    },
+    {
+      "model_id": "claude-sonnet-5",
+      "family": "Claude Sonnet 5",
+      "effort_settings": [
+        "default"
+      ],
+      "added": "2026-07-09",
+      "retired": null,
+      "first_measured": "2026-07-09",
+      "last_measured": "2026-08-22",
+      "n_requests": 139,
+      "n_failed": 0,
+      "notes": "Absent from the comparison tracker's list on 2026-07-02 only (tracker-side, not the API). All Anthropic variants run default adaptive thinking; no effort ladder via the compat layer (see engine tracked_models_anthropic.json)."
+    }
+  ]
+}

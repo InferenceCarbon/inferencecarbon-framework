@@ -1,0 +1,15 @@
+{
+  "_comment": "Curated + locked, seeded from InferenceCarbon_TokenSec_Daily_Mistral.xlsx frontier set, using -latest aliases. Magistral = reasoning family, Mistral/Ministral = non-reasoning; the reasoning split is via separate model ids, so one variant each. 2026-07-23: the recorder now (a) splits think-tag reasoning out of the visible stream — magistral-small visible-tok/s values BEFORE this date are inflated by streamed thinking and are not comparable; (b) records the resolved model id behind each -latest alias per request (magistral-small-latest resolved to a materially different version than the one carried in the external comparison series, so cross-series comparisons for this variant are not meaningful). Check 'Resolved model' in the engine workbook before comparing across series. Edit by hand.",
+  "provider": "mistral",
+  "locked": true,
+  "efforts": [],
+  "models": [
+    {"api_model": "magistral-medium-latest", "reasoning": false},
+    {"api_model": "magistral-small-latest", "reasoning": false},
+    {"api_model": "mistral-large-latest", "reasoning": false},
+    {"api_model": "mistral-medium-latest", "reasoning": false},
+    {"api_model": "mistral-medium-3.5", "reasoning": false},
+    {"api_model": "mistral-small-latest", "reasoning": false},
+    {"api_model": "ministral-8b-latest", "reasoning": false}
+  ]
+}
