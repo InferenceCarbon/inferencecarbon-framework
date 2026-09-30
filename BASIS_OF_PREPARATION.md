@@ -31,7 +31,7 @@ GHG Protocol Scope 3 terms, and this document is their data-quality record.
 
 ## 3. Method in one paragraph
 
-An anchor energy per query (Jegham et al. [15], GPT-4o-mini, 0.577 Wh at 100 in / 300 out) is restated
+An anchor energy per query (Jegham et al. [16], GPT-4o-mini, 0.577 Wh at 100 in / 300 out) is restated
 per 1,000 output tokens, scaled to each GPT-5.x variant by the ratio of measured output throughputs
 (Section 3.2), adjusted for provider PUE (3.1) and for the higher per-accelerator power of the target
 fleet (PQPC, 3.4), and multiplied by the variant's measured reasoning multiplier — hidden plus visible
@@ -51,7 +51,7 @@ provider should challenge first.
 
 | Input | Technological | Temporal | Geographical | Completeness | Reliability | Table 12 |
 |---|---|---|---|---|---|---|
-| Anchor energy per query (Jegham GPT-4o-mini) | 3 — A100-era model, simulation not metering | 2 — 2025 | 2 — US | 3 — one model, two shapes | 3 — peer-reviewed preprint, model not measurement | Medium / Limited |
+| Anchor energy per query (Jegham GPT-4o-mini) | 3 — A100-era model, simulation not metering | 2 — 2025 | 2 — US | 3 — one model, two shapes | 3 — arXiv preprint (not peer-reviewed), model not measurement | Medium / Limited |
 | Throughput per variant (owned campaign) | 1 | 1 — in-period | 2 — one vantage point | 1 — 46 variants, 8 – 105 records each | 2 — measured; per-stream, not cluster (E.1) | Medium |
 | Reasoning multipliers (owned campaign) | 1 | 1 | 2 | 2 — fixed hard task at three lengths | 2 — measured; task-conditional (limitation 7) | Medium |
 | PQPC (2.99) | 3 | 2 | n/a | 3 | 4 — assumed from rated power and utilization literature | Limited / Low |
@@ -79,8 +79,10 @@ provider should challenge first.
 The Low – High envelope is a plausibility band formed by compounding assigned and bootstrap widths; it is
 not a confidence interval and carries no probability statement (3.8). Its median top-to-bottom span is about
 11×. No absolute figure in this release could meet a 5 – 10% materiality threshold; the routing proxy alone
-moves the location-based headline by about −10% to +27% and the market-based headline from 47 to 65
-gCO₂e/kWh across Table 10's scenarios. Within-family *ratios* — one model against another at a fixed
+moves the location-based headline by about −10% to +27% across the single-provider grid-connected
+extremes (319 all-AWS to 447 all-Azure) and to 500 gCO₂e/kWh under the all-Stargate gas-only ceiling, and the
+market-based headline from 47 to 65 gCO₂e/kWh across Table 10's illustrations, rising to 159 under the
+procurement-lag scenario in which Stargate is uncredited pending Oracle's first in-period disclosure. Within-family *ratios* — one model against another at a fixed
 setting, or one setting against another on the same model — are known to roughly ±10% because the common
 factors cancel (Table C3), and are the figures on which a decision can safely rest.
 

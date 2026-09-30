@@ -114,8 +114,9 @@ service are the operative license for that service
 
 ## Where the live figures are
 
-The current, continuously updated figures (every tracked model and reasoning
-setting, with bounds and confidence) are served by the InferenceCarbon.ai API:
+The current, continuously updated figures (every published model and reasoning
+setting, with bounds and confidence; OpenAI text models at v1.0.0, other providers
+as each companion brief is published) are served by the InferenceCarbon.ai API:
 free for academic research, regulators and public bodies, personal use and a
 30-day evaluation, with a key from https://www.inferencecarbon.ai/api. The
 same figures are shown at https://www.inferencecarbon.ai/models, and the

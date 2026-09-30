@@ -52,7 +52,10 @@ version they were computed under.
 Corrections, additional empirical data and per-model disclosures are
 welcome: methodology@inferencecarbon.ai.
 
-## Paper-authoritative artifacts
+## Authoritative artifacts within a release
+
+The precedence below concerns the *numbers* inside one release. On the *policy* described in
+this file, the paper is canonical (see the top of this file); the two rules do not conflict.
 
 Within a release the workbook `data/workbooks/OpenAIModelCalculations_<version>.xlsx` is the
 authoritative calculation chain: paper tables are regenerated from it, never edited by hand, and
