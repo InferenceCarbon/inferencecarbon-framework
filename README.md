@@ -29,6 +29,7 @@ parameters/     Everything Appendix A tabulates, with per-row source and access 
 data/           Frozen corpus and checksum manifest, Zenodo fetch script, derived workbooks
 reproduce/      corpus_summary.py (corpus → workbook inputs) and paper_tables.py (workbook → tables, paper check); expected outputs committed
 briefs/         Per-brief data folders and reproduce scripts
+tools/api-harness/  ic_api.py, a standard-library command-line client for the public API (sign-up, key, every endpoint)
 BASIS_OF_PREPARATION.md   Boundary, method, conventions, data-quality indicators — for inventory preparers and assurance providers
 VERIFICATION.md           Chain of evidence, verification steps and record, known discrepancies, reproduction-statement template
 ```
@@ -114,8 +115,9 @@ service are the operative license for that service
 
 ## Where the live figures are
 
-The current, continuously updated figures (every tracked model and reasoning
-setting, with bounds and confidence) are served by the InferenceCarbon.ai API:
+The current, continuously updated figures (every published model and reasoning
+setting, with bounds and confidence; OpenAI text models at v1.0.0, other providers
+as each companion brief is published) are served by the InferenceCarbon.ai API:
 free for academic research, regulators and public bodies, personal use and a
 30-day evaluation, with a key from https://www.inferencecarbon.ai/api. The
 same figures are shown at https://www.inferencecarbon.ai/models, and the
