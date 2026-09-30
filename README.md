@@ -29,6 +29,7 @@ parameters/     Everything Appendix A tabulates, with per-row source and access 
 data/           Frozen corpus and checksum manifest, Zenodo fetch script, derived workbooks
 reproduce/      corpus_summary.py (corpus → workbook inputs) and paper_tables.py (workbook → tables, paper check); expected outputs committed
 briefs/         Per-brief data folders and reproduce scripts
+tools/api-harness/  ic_api.py, a standard-library command-line client for the public API (sign-up, key, every endpoint)
 BASIS_OF_PREPARATION.md   Boundary, method, conventions, data-quality indicators — for inventory preparers and assurance providers
 VERIFICATION.md           Chain of evidence, verification steps and record, known discrepancies, reproduction-statement template
 ```
