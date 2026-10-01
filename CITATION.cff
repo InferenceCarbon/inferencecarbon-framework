@@ -1,6 +1,7 @@
 # GitHub renders this as a "Cite this repository" button.
 # The Zenodo DOIs were added in the commit following the first release; the
-# arXiv identifier is added when the paper is announced (see CHANGELOG.md).
+# paper's own Zenodo DOI on 1 October 2026 (text v1.0.1); the arXiv identifier
+# is added when the paper is announced (see CHANGELOG.md).
 # The tagged v1.0.0 snapshot predates both by design.
 cff-version: 1.2.0
 message: >-
@@ -33,3 +34,8 @@ preferred-citation:
     - family-names: Manktelow
       given-names: James
   year: 2026
+  version: "1.0.1"
+  doi: 10.5281/zenodo.23084616
+  url: "https://doi.org/10.5281/zenodo.23084616"
+  publisher:
+    name: Zenodo
