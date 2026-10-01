@@ -1,11 +1,13 @@
 # Tracked-model manifests
 
 One JSON file per provider, compiled from the frozen owned-benchmark corpus
-(14,733 request records) and the campaign retirement record. Each entry
+(14,733 request records, of which 52 are synthetic pipeline-test records from
+24 June 2026 that the reproduction scripts exclude) and the campaign retirement
+record. Each entry
 carries the model id **exactly as the API names it**, the family, the effort
 settings measured, and the campaign dates — so that when a brief has to
-explain, say, that its anchor model was retired from the API (as the Gemini
-brief does for `gemini-3-pro-preview`, retired 1 June 2026), that
+explain, say, that its anchor model was retired from the API (as a Gemini
+brief would for `gemini-3-pro-preview`, retired 1 June 2026), that
 explanation is reconstructable from the manifest rather than from memory.
 
 ## Files
@@ -54,7 +56,7 @@ explanation is reconstructable from the manifest rather than from memory.
 
 Entries whose `effort_settings` is empty never produced a successful owned
 sample; the `notes` field says why (retirement, or the codex-line
-responses-endpoint incompatibility — paper limitation 25).
+responses-endpoint incompatibility, described in RETIREMENTS.md).
 
 Manifests are regenerated from the corpus, not hand-edited; if a hand edit
 is unavoidable, record it in `notes`.

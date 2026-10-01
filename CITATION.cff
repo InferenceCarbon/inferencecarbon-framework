@@ -7,7 +7,7 @@ cff-version: 1.2.0
 message: >-
   If you use this framework, please cite it. Cite the version DOI to fix a
   specific calculation, the concept DOI for the framework as a whole, and the
-  arXiv identifier for the text. A headline figure should always travel with
+  paper's own DOI (or its arXiv identifier, once announced) for the text. A headline figure should always travel with
   its plausibility band and its confidence label.
 title: "InferenceCarbon framework: \"So, What's the Carbon Cost of Using AI?\" A Bounded Estimation Framework for Calculating the Per-Token Carbon Intensity of Large Language Model Inference Under Limited Disclosure, Using the Worked Example of OpenAI's GPT-5 Model Family"
 type: software
@@ -18,7 +18,9 @@ authors:
     given-names: James
     orcid: "https://orcid.org/0009-0003-6822-8300"
     affiliation: "InferenceCarbon Ltd"
-license: Apache-2.0
+license:
+  - Apache-2.0
+  - CC-BY-NC-4.0
 identifiers:
   - type: doi
     value: 10.5281/zenodo.22962475

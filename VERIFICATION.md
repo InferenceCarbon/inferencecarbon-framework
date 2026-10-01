@@ -73,7 +73,7 @@ Paper v1.0.1 revises the wording of v1.0.0; it is a patch release (VERSIONING.md
 
 None known between the corpus, the deposited workbook and the paper's tables at this release. Discrepancies
 found after release are recorded here until the next release corrects them (VERSIONING.md,
-"Paper-authoritative artifacts").
+"Authoritative artifacts within a release").
 
 One rule is worth restating because a verifier will meet it: the word-minimum filter (an answer that stops
 short of the prompt's word minimum is excluded) applies to the fixed-task reasoning cells and not to the
@@ -82,8 +82,10 @@ k = 36 heavy-task rung, whose answers are puzzle solutions rather than summaries
 
 ## 5. Open items for independent verification
 
-1. A named third party runs V1 – V4 from the Zenodo deposit on a clean machine and signs a short reproduction
-   statement (template in §6). Candidates: a university energy-informatics group; or an ISAE 3000 limited-assurance
+1. A named third party runs V1 – V3 and V6 from the Zenodo deposit on a clean machine, checks the published
+   paper's tables against `reproduce/expected/tables/` (V4 itself needs the paper's .docx, which is not
+   deposited and is available from the author on request), and signs a short reproduction statement
+   (template in §6). Candidates: a university energy-informatics group; or an ISAE 3000 limited-assurance
    engagement on the methodology.
 2. A metered anchor: prefill and decode power on an open-weight model on rented accelerators, to test the
    1/TPS scaling law and the pre-fill ratio (paper Appendix G).

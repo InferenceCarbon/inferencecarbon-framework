@@ -14,7 +14,7 @@ secrets/
 *APIKey*.txt
 *Key.txt
 
-# Engine run state and outputs (the corpus belongs to the Zenodo deposit)
+# Engine run state and outputs (the frozen corpus is committed as data/*.zip)
 results/
 _runlogs/
 bench_logs/
@@ -36,7 +36,7 @@ venv/
 .vscode/
 .idea/
 
-# Corpus files live in the Zenodo deposit, not in git
+# Scratch copy written by data/fetch_corpus.py
 data/corpus/
 *.jsonl.gz
 

@@ -76,3 +76,4 @@ the workbook, and the discrepancy is logged in VERIFICATION.md §4 until the nex
 |---|---|---|
 | Major (vX.0) | Repository snapshot, summary workbooks, parameter tables, full raw corpus for the release window | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions; raw corpus: CC BY-NC 4.0 with the same express permissions (see LICENSE, LICENSE-DATA) |
 | Minor (vX.Y) | Repository snapshot and the summary workbooks the release's changed tables consume | Software: Apache 2.0; summary workbooks and parameter tables: CC BY-NC 4.0 with the express permissions (see LICENSE, LICENSE-DATA) |
+| Patch (vX.Y.Z) | The revised paper text only, as a new version of the paper's own Zenodo record; no repository snapshot, workbook or corpus is re-deposited | Paper text: CC BY-NC-ND 4.0 |

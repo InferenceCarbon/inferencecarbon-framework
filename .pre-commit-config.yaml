@@ -10,7 +10,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: check-added-large-files
-        args: ["--maxkb=51200"]   # nothing near GitHub's 100 MB limit; corpus goes to Zenodo
+        args: ["--maxkb=51200"]   # nothing near GitHub's 100 MB limit
       - id: detect-private-key
       - id: end-of-file-fixer
       - id: trailing-whitespace

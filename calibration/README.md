@@ -7,8 +7,8 @@ series. Every brief refers back to here rather than restating it.
 
 - **o200k_base** — OpenAI's tokenizer, used as the common cross-provider
   yardstick. Per-token figures on this basis are comparable across providers
-  but do not match any non-OpenAI provider's own token counts. The Gemini
-  brief's figures are on this basis.
+  but do not match any non-OpenAI provider's own token counts. Briefs for providers without a
+  calibration use this basis.
 - **Calibrated (native)** — per-token figures expressed in the provider's own
   tokenizer, obtained by calibrating o200k_base counts against native counts
   over the calibration corpus in `runs/`. The Claude brief is scheduled on
@@ -28,5 +28,4 @@ models tokenize the same visible text at **k ~= 1.64x** the o200k_base count
 (per-model slopes 1.63-1.65, small per-model intercepts, recorded in the
 file). OpenAI models need no calibration (native counts are o200k_base).
 Google, Mistral and DeepSeek calibrations will be added when their briefs
-are prepared; until then their figures are published on the o200k_base
-basis only.
+are prepared. No brief has been published yet.
