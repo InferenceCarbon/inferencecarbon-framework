@@ -10,7 +10,9 @@ scripts that reproduce the paper's tables.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22962475.svg)](https://doi.org/10.5281/zenodo.22962475)
 
-- Paper: submitted to arXiv on 25 September 2026; identifier to follow (see CHANGELOG.md)
+- Paper: [read it on Zenodo (PDF)](https://doi.org/10.5281/zenodo.23084615). Text v1.0.1 of 1 October 2026, DOI
+  [10.5281/zenodo.23084616](https://doi.org/10.5281/zenodo.23084616); it revises the wording of v1.0.0 and changes no table. Also submitted
+  to arXiv on 25 September 2026; identifier to follow (see CHANGELOG.md). The paper is not in this repository.
 - Archive: concept DOI [10.5281/zenodo.22962475](https://doi.org/10.5281/zenodo.22962475) (always resolves to the
   latest version); this release, v1.0.0: version DOI [10.5281/zenodo.22962476](https://doi.org/10.5281/zenodo.22962476)
 
@@ -128,7 +130,7 @@ query. To challenge a figure or the method: https://www.inferencecarbon.ai/revie
 
 See [CITATION.cff](CITATION.cff) (GitHub renders it as "Cite this
 repository"). Version DOI to fix a calculation; concept DOI for the
-framework as a whole; the arXiv identifier for the text. **A headline figure
+framework as a whole; the paper's own DOI, or its arXiv identifier once announced, for the text. **A headline figure
 travels with its plausibility band and its confidence label** — quoting the
 central value alone misrepresents the finding.
 

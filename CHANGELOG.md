@@ -6,6 +6,28 @@ archived on Zenodo with its own version DOI.
 
 ## [Unreleased]
 
+## [1.0.1] — 2026-10-01 — paper text only
+
+Patch release (VERSIONING.md): the paper's wording is revised for clarity. No method, parameter, table
+value or deposited file changes, so there is no new tag and no new data and code deposit. v1.0.0
+([10.5281/zenodo.22962476](https://doi.org/10.5281/zenodo.22962476)) remains the release behind the paper's tables.
+
+The paper is now archived on Zenodo as a record of its own (type Preprint), separate from the data and code
+deposit: version DOI [10.5281/zenodo.23084616](https://doi.org/10.5281/zenodo.23084616), all versions
+[10.5281/zenodo.23084615](https://doi.org/10.5281/zenodo.23084615).
+
+| Release | Data and code deposit | Paper text | arXiv |
+| --- | --- | --- | --- |
+| v1.0.0, 25 Sep 2026 | 10.5281/zenodo.22962476 | not deposited separately | submitted 25 Sep 2026; not yet announced |
+| v1.0.1, 1 Oct 2026 | unchanged (v1.0.0) | 10.5281/zenodo.23084616 | to be posted as a replacement once the submission is announced |
+
+Checks: V4 re-run on the v1.0.1 text, 1,971 of 1,971 cells agree; all 19 tables identical to v1.0.0
+(VERIFICATION.md §3.1c).
+
+### Changed
+- VERSIONING.md: patch class defined, mirroring paper Section 8.5 as revised in v1.0.1.
+- README.md, CITATION.cff: link and cite the paper by its own DOI.
+
 ## [1.0.0] — 2026-09-25
 
 First public release, accompanying the framework paper.

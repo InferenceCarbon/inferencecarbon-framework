@@ -18,7 +18,8 @@ replicator can verify what they fetched. The benchmark campaign continues
 beyond the paper's window; the ongoing series is operated through the
 InferenceCarbon.ai API rather than deposited. The full corpus and summary
 workbooks are deposited at major versions only; minor releases deposit only
-the workbooks their changed tables consume. Deposited artifacts carry the
+the workbooks their changed tables consume; patch releases deposit only the
+revised paper text. Deposited artifacts carry the
 class licenses of paper Section 8.2 and Appendix H.1 whatever the release
 class: Apache 2.0 for software, and CC BY-NC 4.0 for the summary workbooks,
 parameter tables and raw corpus, each with the express permissions stated in
@@ -33,6 +34,11 @@ Semantic versioning, per paper section 8.5:
 - **Minor** (e.g. v1.0 → v1.1) — parameter updates that preserve
   comparability (including substantive updates to the Appendix A provider
   reference data).
+- **Patch** (e.g. v1.0.0 → v1.0.1) — revisions to the text of the paper
+  only: clarifications and corrections of wording that change no method,
+  parameter, table value or deposited file. A patch is archived as a new
+  version of the paper's own Zenodo record; the data and code deposit is
+  not re-issued and keeps its DOI, and this repository is not re-tagged.
 
 Each release carries three identifiers — the semantic version, its Zenodo
 DOI, and, where the paper text itself changed, an arXiv revision number —

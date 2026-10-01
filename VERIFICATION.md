@@ -56,6 +56,15 @@ The final v1.0.0 workbook (SHA-256 `6692fd642a043fc5eda7ab9cd3714b663fae3e01e0e1
 - V4: paper v1.0.0 (final .docx): every compared cell agrees (0 differ).
 - V6: passes with zero undeclared constants.
 
+### 3.1c Paper text v1.0.1, 1 October 2026 (Claude Fable 5.1 at the author's direction — not independent)
+
+Paper v1.0.1 revises the wording of v1.0.0; it is a patch release (VERSIONING.md) and the deposit is unchanged.
+
+- V4 re-run against the v1.0.1 .docx: Tables 6, 7, 8, B1, C1 and C2 — 1,971 numeric cells compared, 1,971 agree.
+- All 19 tables of the paper (387 rows) compared cell by cell between the v1.0.0 and v1.0.1 .docx: no cell differs.
+- The published PDF ([10.5281/zenodo.23084616](https://doi.org/10.5281/zenodo.23084616)) was produced from that .docx. V4 reads a
+  .docx, which is not deposited; an outside party can check the PDF's tables against `reproduce/expected/tables/`.
+
 ### 3.2 Independent reproduction
 
 **None yet.** The framework is not independently verified. See the open items below.
