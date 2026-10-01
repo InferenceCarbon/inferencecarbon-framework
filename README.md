@@ -10,7 +10,7 @@ scripts that reproduce the paper's tables.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22962475.svg)](https://doi.org/10.5281/zenodo.22962475)
 
-- Paper: [read it on Zenodo (PDF)](https://doi.org/10.5281/zenodo.23084615). Text v1.0.1 of 1 October 2026, DOI
+- Paper: [read it on Zenodo](https://doi.org/10.5281/zenodo.23084615). Text v1.0.1 of 1 October 2026, DOI
   [10.5281/zenodo.23084616](https://doi.org/10.5281/zenodo.23084616); it revises the wording of v1.0.0 and changes no table. Also submitted
   to arXiv on 25 September 2026; identifier to follow (see CHANGELOG.md). The paper is not in this repository.
 - Archive: concept DOI [10.5281/zenodo.22962475](https://doi.org/10.5281/zenodo.22962475) (always resolves to the
@@ -30,7 +30,7 @@ calibration/    Tokenizer calibration (o200k_base vs native); the canonical basi
 parameters/     Everything Appendix A tabulates, with per-row source and access date
 data/           Frozen corpus and checksum manifest, Zenodo fetch script, derived workbooks
 reproduce/      corpus_summary.py (corpus → workbook inputs) and paper_tables.py (workbook → tables, paper check); expected outputs committed
-briefs/         Per-brief data folders and reproduce scripts
+briefs/         Per-brief data folders and reproduce scripts (none published yet)
 tools/api-harness/  ic_api.py, a standard-library command-line client for the public API (sign-up, key, every endpoint)
 BASIS_OF_PREPARATION.md   Boundary, method, conventions, data-quality indicators — for inventory preparers and assurance providers
 VERIFICATION.md           Chain of evidence, verification steps and record, known discrepancies, reproduction-statement template
@@ -66,15 +66,16 @@ to those caps. See [engine/README.md](engine/README.md).
 ## Data provenance, and what is deliberately absent
 
 The raw per-request corpus ships in this repository as
-`data/InferenceCarbon_corpus_frozen_20260822.zip` (8.5 MB, 14,733 request
-records, 24 Jun – 22 Aug 2026) and is mirrored in the Zenodo data deposit.
+`data/InferenceCarbon_corpus_frozen_20260822.zip` (8.9 MB; 14,733 request
+records, 24 Jun – 22 Aug 2026, of which 52 are synthetic pipeline-test records
+that the reproduction scripts exclude) and is mirrored in the Zenodo data deposit.
 Both copies verify against the same SHA-256 in `data/manifest.csv`:
 
 ```bash
 (cd data && shasum -a 256 -c InferenceCarbon_corpus_frozen_20260822.sha256)
 ```
 
-To fetch and verify the Zenodo mirror instead:
+To fetch the Zenodo deposit and verify the corpus inside it instead:
 
 ```bash
 python data/fetch_corpus.py

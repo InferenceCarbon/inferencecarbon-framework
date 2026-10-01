@@ -6,6 +6,35 @@ archived on Zenodo with its own version DOI.
 
 ## [Unreleased]
 
+Corrections from the audit of 1 October 2026. Documentation and tooling only: no workbook, corpus,
+parameter value or table changes, and nothing is re-deposited.
+
+### Fixed
+- `data/fetch_corpus.py` pointed at a placeholder Zenodo record and could not run. It now downloads the
+  v1.0.0 deposit (10.5281/zenodo.22962476), takes the corpus out of the release archive and checks its
+  SHA-256 against `data/manifest.csv`.
+- `parameters/`: bracketed reference numbers now match the reference list of the published paper (text
+  v1.0.1); they carried an earlier draft's numbering. One dead source link replaced (NREL life-cycle
+  update), and the upstream gas figure in a note corrected from ~100 to ~93 gCO2e/kWh to match the paper.
+  No parameter value changed.
+- Corpus count: the 14,733 request records include 52 synthetic pipeline-test (mock) records from
+  24 June 2026. README, `manifests/README.md` and `manifests/RETIREMENTS.md` now say so; RETIREMENTS.md
+  wrongly said they were excluded from `variant_dates.csv`. The reproduction scripts exclude them
+  (filter F1), so no table is affected. Paper Appendix B.1 quotes the same total; its wording is to be
+  clarified in the next text revision.
+- `manifests/openai.json`: campaign start corrected to 24 June 2026 (was 25 June, the first day of the
+  other providers' series).
+- VERSIONING.md: Patch row added to the deposit table. VERIFICATION.md: stale cross-reference fixed, and
+  the independent-reproduction item now says V4 needs the paper's .docx, which is not deposited.
+- CITATION.cff: message updated; data licence listed beside the code licence.
+- Wording that described companion briefs as already published (calibration/, manifests/, briefs/).
+
+### Notes on the frozen v1.0.0 deposit
+The deposit cannot be changed. It carries, and will keep, the following residue, all corrected on main:
+placeholder identifiers in its own CHANGELOG.md and README.md ("zenodo.TODO", "arXiv:TODO"); the earlier
+reference numbering in `parameters/` and one reference number in BASIS_OF_PREPARATION.md; and the
+non-working `data/fetch_corpus.py`. None affects the corpus, the workbooks or the reproduction scripts.
+
 ## [1.0.1] — 2026-10-01 — paper text only
 
 Patch release (VERSIONING.md): the paper's wording is revised for clarity. No method, parameter, table

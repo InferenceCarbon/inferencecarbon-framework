@@ -68,8 +68,7 @@ Key management uses your signed-in session, never the API key itself.
 
 ## Other hosts
 
-`--base https://staging.inferencecarbon.ai` (or `INFERENCECARBON_API_BASE`) points the
-harness at another deployment.
+`--base <url>` (or `INFERENCECARBON_API_BASE`) points the harness at another deployment.
 
 ## Reporting rule
 
