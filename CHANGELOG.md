@@ -10,6 +10,11 @@ Corrections from the audit of 1 October 2026. Documentation and tooling only: no
 parameter value or table changes, and nothing is re-deposited.
 
 ### Fixed
+- `reproduce/requirements.txt` pins the library versions the expected outputs were last reproduced with
+  (numpy 1.26.4, openpyxl 3.1.2, lxml 5.2.1; re-run 3 October 2026: `corpus_summary`, `paper_tables` and
+  `formula_audit` all identical to `expected/`).
+- `LICENSE-DATA` section 2 carries the same wording on reproduction in guidance and standards as the paper
+  (Appendix H.1) and section 1.
 - `data/fetch_corpus.py` pointed at a placeholder Zenodo record and could not run. It now downloads the
   v1.0.0 deposit (10.5281/zenodo.22962476), takes the corpus out of the release archive and checks its
   SHA-256 against `data/manifest.csv`.
