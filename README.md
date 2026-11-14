@@ -1,5 +1,23 @@
 # InferenceCarbon framework
 
+> **Notice, November 14, 2026: the method in this repository is superseded.**
+>
+> The throughput scaling (paper Section 3.2) and the Per-Query Power Correction (Sections 3.4 and 4.10)
+> should no longer be used. The scaling treats a model's speed, in tokens per second, as a guide to its
+> energy per token. Our later measurements show that this does not hold. Energy per output token fell
+> 14- to 42-fold between one request at a time and a heavily loaded server [1]. Providers rarely disclose
+> how heavily their servers are loaded.
+>
+> The frozen corpus stands as the record of the requests we observed. The energy and carbon figures in the
+> calculation workbooks, and any figure reproduced from them, are built on the superseded scaling, so
+> please do not use them for carbon reporting. A revised paper and release, with a new method for
+> calculating Wh per 1,000 tokens, are in preparation. This release stays available as the record of what
+> was published.
+>
+> [1] J. Manktelow, "Measured Energy per Token for Four Open Language Models on NVIDIA H100 and B200,
+> Analyzed by Batch, Context, Precision, Tensor Parallelism and Prefix Caching," InferenceCarbon Ltd, 2026,
+> [doi:10.5281/zenodo.24014979](https://doi.org/10.5281/zenodo.24014979).
+
 ## What this is
 
 The repository accompanying *"So, What's the Carbon Cost of Using AI?" A
@@ -11,8 +29,9 @@ scripts that reproduce the paper's tables.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22962475.svg)](https://doi.org/10.5281/zenodo.22962475)
 
 - Paper: [read it on Zenodo](https://doi.org/10.5281/zenodo.23084615). Text v1.0.1 of 1 October 2026, DOI
-  [10.5281/zenodo.23084616](https://doi.org/10.5281/zenodo.23084616); it revises the wording of v1.0.0 and changes no table. Also submitted
-  to arXiv on 25 September 2026; identifier to follow (see CHANGELOG.md). The paper is not in this repository.
+  [10.5281/zenodo.23084616](https://doi.org/10.5281/zenodo.23084616); it revises the wording of v1.0.0 and changes no table. An arXiv
+  submission of 25 September 2026 was never announced, and its withdrawal has been requested (see CHANGELOG.md).
+  The paper is not in this repository.
 - Archive: concept DOI [10.5281/zenodo.22962475](https://doi.org/10.5281/zenodo.22962475) (always resolves to the
   latest version); this release, v1.0.0: version DOI [10.5281/zenodo.22962476](https://doi.org/10.5281/zenodo.22962476)
 
@@ -127,11 +146,13 @@ same figures are shown at https://www.inferencecarbon.ai/models, and the
 calculator at https://www.inferencecarbon.ai/calculator applies them to a
 query. To challenge a figure or the method: https://www.inferencecarbon.ai/review-this-paper.
 
+These figures come from the method the notice above supersedes.
+
 ## How to cite
 
 See [CITATION.cff](CITATION.cff) (GitHub renders it as "Cite this
 repository"). Version DOI to fix a calculation; concept DOI for the
-framework as a whole; the paper's own DOI, or its arXiv identifier once announced, for the text. **A headline figure
+framework as a whole; the paper's own DOI for the text. **A headline figure
 travels with its plausibility band and its confidence label** — quoting the
 central value alone misrepresents the finding.
 

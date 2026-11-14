@@ -6,6 +6,19 @@ archived on Zenodo with its own version DOI.
 
 ## [Unreleased]
 
+### Notice of 14 November 2026: the method is superseded
+The throughput scaling (paper Section 3.2) and the Per-Query Power Correction (Sections 3.4 and 4.10) should no
+longer be used. Later measurements show that energy per output token fell 14- to 42-fold between one request at a
+time and a heavily loaded server ([doi:10.5281/zenodo.24014979](https://doi.org/10.5281/zenodo.24014979)), so a
+model's speed is not a guide to its energy per token. The frozen corpus stands as the record of the requests
+observed. The energy and carbon figures built on the scaling should not be used for carbon reporting. A revised
+paper and release, with a new method for calculating Wh per 1,000 tokens, are in preparation. The same notice is
+on the Zenodo records of the paper (10.5281/zenodo.23084616) and of the data and code deposit
+(10.5281/zenodo.22962476). No file in either deposit is changed, and there is no new tag or release.
+
+The arXiv submission of 25 September 2026 was never announced, and its withdrawal has been requested. The entries
+below record its status at the time they were written.
+
 Corrections from the audit of 1 October 2026. Documentation and tooling only: no workbook, corpus,
 parameter value or table changes, and nothing is re-deposited.
 
